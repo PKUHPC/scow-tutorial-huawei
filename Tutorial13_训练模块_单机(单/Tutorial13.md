@@ -1,11 +1,11 @@
-# Tutorial13: 在SCOW-AI集群的训练模块中使用LLaMA-Factory进行模型微调
+# Tutorial13: 在SCOW-AI集群的训练模块中使用LLaMA-Factory进行单机单卡/多卡模型微调
 
 * 集群类型：SCOW AI集群
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供
-* 所需资源：建议使用1张910B NPU运行本教程。
-* 目标：本节以Qwen2.5-1.5B-Instruct模型为例，在SCOW-AI集群的训练模块中使用LLaMA-Factory框架对这个Qwen大模型完成微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
+* 所需资源：建议使用1*2张910B NPU(单节点)运行本教程。
+* 目标：本节以Qwen2.5-1.5B-Instruct模型为例，在SCOW-AI集群的训练模块中使用LLaMA-Factory框架对这个Qwen大模型完成单机单卡/多卡微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 ## 1、准备训练环境
 基础镜像我们选择官方的llamafactory镜像环境，llamafactory:0.9.4-npu-a2用于昇腾NPU对应scow-zy集群，llamafactory:0.9.4用于英伟达GPU对应scow-ai集群，本节以配置NPU环境为主。
