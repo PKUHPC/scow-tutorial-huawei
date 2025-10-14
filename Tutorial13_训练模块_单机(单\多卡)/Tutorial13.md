@@ -21,39 +21,39 @@ app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4
 ```
 
 在镜像->我的镜像中添加镜像，点击添加。
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](assets/image.png)
+![alt text](assets/image-1.png)
 
 这样在我的镜像界面就能看到刚刚添加的镜像，后续训练时会使用。
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ## 2、数据集准备
 使用identity-pku-assistant数据集，这个数据集的作用是调整大模型的自我身份认知，让大模型认为自己是北大助手。接下来介绍上传该数据集的方法，也可跳过当前步骤，使用集群内置的identity-pku-assistant数据集。
 
 在文件系统中创建文件夹，填写目录名
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](assets/image-3.png)
+![alt text](assets/image-4.png)
 
 进入创建好的文件夹中，点击新文件，填写文件名。
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 
 直接点击创建好的文件进入编辑界面，点击编辑，把数据集内容粘贴到文本框，点击保存。（数据集内容可参考https://app-store-images.pku.edu.cn/pku-app-store-storage/dataset/identity-pku-assistant.json）
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
+![alt text](assets/image-6.png)
+![alt text](assets/image-7.png)
+![alt text](assets/image-8.png)
 
 到我的数据集中点击添加，填写数据集信息，最后点击确定
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](assets/image-9.png)
+![alt text](assets/image-10.png)
 
 数据集创建完成后点击创建新版本，填写版本名称和版本描述，然后点击选择数据集栏进入文件系统界面，选择前面创建的文件夹，最后点击确定
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](assets/image-11.png)
+![alt text](assets/image-12.png)
+![alt text](assets/image-13.png)
+![alt text](assets/image-14.png)
 
 这样数据集就创建完成了，后续模型训练可以挂载该数据集
-![alt text](image-15.png)
+![alt text](assets/image-15.png)
 
 ## 3、训练模块单机单卡/多卡训练
 运行命令如下，包含五个部分，创建config.yaml、注册训练数据集、切换到项目目录、训练、参数合并
@@ -91,34 +91,34 @@ export_legacy_format: false
 ```
 
 在创建训练作业时选择前面配置好的镜像，选择Qwen2.5-1.5B-Instruct模型，以及添加的identity-pku-assistant数据集（注意切换路径要填写绝对路径！！！）
-![alt text](image-16.png)
+![alt text](assets/image-16.png)
 
 填写对应资源，如果单卡则选择1张卡，多卡就选择2、4、8，这里选择2，点击提交
-![alt text](image-17.png)
+![alt text](assets/image-17.png)
 
 训练过程中点击详情->日志
-![alt text](image-18.png)
-![alt text](image-19.png)
+![alt text](assets/image-18.png)
+![alt text](assets/image-19.png)
 
 可以看到训练日志
-![alt text](image-20.png)
+![alt text](assets/image-20.png)
 
 训练完成之后进入作业目录可以看到训练完成的新模型在目录中，可以下载进行后续测试等实验
-![alt text](image-21.png)
-![alt text](image-22.png)
+![alt text](assets/image-21.png)
+![alt text](assets/image-22.png)
 
 ## 4、推理验证
 得到merge的模型后进行推理验证微调是否成功，使用nextchat应用
-![alt text](image-23.png)
+![alt text](assets/image-23.png)
 
 选择默认镜像，添加挂载点，填写前面微调模型的路径，添加环境变量，同样填写微调模型的路径
-![alt text](image-24.png)
+![alt text](assets/image-24.png)
 
 选择一张加速卡，点击提交
-![alt text](image-25.png)
+![alt text](assets/image-25.png)
 
 点击连接
-![alt text](image-26.png)
+![alt text](assets/image-26.png)
 
 在聊天框进行对话，可以发现模型回答达到预期效果
-![alt text](image-27.png)
+![alt text](assets/image-27.png)
