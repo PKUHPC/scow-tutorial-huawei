@@ -106,3 +106,19 @@ export_legacy_format: false
 训练完成之后进入作业目录可以看到训练完成的新模型在目录中，可以下载进行后续测试等实验
 ![alt text](image-21.png)
 ![alt text](image-22.png)
+
+## 4、推理验证
+得到merge的模型后进行推理验证微调是否成功，使用nextchat应用
+![alt text](image-23.png)
+
+选择默认镜像，添加挂载点，填写前面微调模型的路径，添加环境变量，同样填写微调模型的路径
+![alt text](image-24.png)
+
+选择一张加速卡，点击提交
+![alt text](image-25.png)
+
+点击连接
+![alt text](image-26.png)
+
+在聊天框进行对话，可以发现模型回答达到预期效果
+![alt text](image-27.png)
