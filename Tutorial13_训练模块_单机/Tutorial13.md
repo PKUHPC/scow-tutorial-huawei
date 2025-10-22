@@ -23,7 +23,7 @@
 ![alt text](assets/image-7.png)
 ![alt text](assets/image-8.png)
 
-到我的数据集中点击添加，填写数据集信息，最后点击确定
+到我的数据集中点击添加，填写数据集名称`identity-pku-assistant`，数据集描述`调整大模型自我身份认知为北大助手`，最后点击确定
 ![alt text](assets/image-9.png)
 ![alt text](assets/image-10.png)
 
