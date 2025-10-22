@@ -97,7 +97,7 @@ export_legacy_format: false
 得到微调后的模型完整路径，进行推理验证微调是否成功，使用nextchat应用
 ![alt text](assets/image-23.png)
 
-选择默认镜像，添加挂载点，填写微调后的模型完整路径，添加环境变量，同样填写微调后的模型完整路径
+选择默认镜像，添加挂载点，填写微调后的模型完整路径，添加环境变量`SCOW_AI_MODEL_PATH`，同样填写微调后的模型完整路径
 ![alt text](assets/image-24.png)
 
 选择一张加速卡，点击提交
