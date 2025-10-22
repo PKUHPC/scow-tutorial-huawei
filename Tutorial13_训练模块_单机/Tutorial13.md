@@ -4,7 +4,7 @@
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供
-* 所需资源：建议使用1*2张910B NPU(单节点)运行本教程。
+* 所需资源：建议使用2张910B NPU(单节点)运行本教程。
 * 目标：本节以Qwen2.5-1.5B-Instruct模型为例，在SCOW-AI集群的训练模块中使用LLaMA-Factory框架对这个Qwen大模型完成单机单卡/多卡微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 
