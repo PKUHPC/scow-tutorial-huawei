@@ -37,7 +37,10 @@
 ![alt text](assets/image-15.png)
 
 ## 2、训练模块单机单卡/多卡训练
-在创建训练作业时
+在scow-ai网页中点击作业->训练
+![alt text](image.png)
+
+填写训练所需字段：
 * 镜像来源选择远程镜像
 * 远程镜像地址填写教程开头给出的地址：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 运行命令填写：
