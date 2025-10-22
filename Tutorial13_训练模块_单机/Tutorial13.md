@@ -11,7 +11,7 @@
 ## 1、数据集准备
 使用identity-pku-assistant数据集，这个数据集的作用是调整大模型的自我身份认知，让大模型认为自己是北大助手。接下来介绍上传该数据集的方法，也可跳过当前步骤，使用集群内置的identity-pku-assistant数据集。
 
-在文件系统中创建文件夹，填写目录名
+在文件系统中创建文件夹，填写目录名；目录名可自定义，例如`identity-pku-assistant`：
 ![alt text](assets/image-3.png)
 ![alt text](assets/image-4.png)
 
