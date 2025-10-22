@@ -89,15 +89,15 @@ export_legacy_format: false
 可以看到训练日志
 ![alt text](assets/image-20.png)
 
-训练完成之后进入作业目录可以看到训练完成的新模型在目录中，可以下载进行后续测试等实验
+训练完成之后进入作业目录可以看到训练完成的新模型在目录中，微调后的模型完整路径一般为`[家目录]/scow/ai/appData/[作业名]/llama-factory-merged`，复制该路径便于后续测试
 ![alt text](assets/image-21.png)
 ![alt text](assets/image-22.png)
 
 ## 3、推理验证
-得到merge的模型后进行推理验证微调是否成功，使用nextchat应用
+得到微调后的模型完整路径，进行推理验证微调是否成功，使用nextchat应用
 ![alt text](assets/image-23.png)
 
-选择默认镜像，添加挂载点，填写前面微调模型的路径，添加环境变量，同样填写微调模型的路径
+选择默认镜像，添加挂载点，填写微调后的模型完整路径，添加环境变量，同样填写微调后的模型完整路径
 ![alt text](assets/image-24.png)
 
 选择一张加速卡，点击提交
