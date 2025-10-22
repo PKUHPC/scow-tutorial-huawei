@@ -9,7 +9,7 @@
 
 
 ## 1、数据集准备
-使用identity-pku-assistant数据集，这个数据集的作用是调整大模型的自我身份认知，让大模型认为自己是北大助手。接下来介绍上传该数据集的方法，也可跳过当前步骤，使用集群内置的identity-pku-assistant数据集。
+使用identity-pku-assistant数据集，这个数据集的作用是调整大模型的自我身份认知，让大模型认为自己是北大助手。接下来介绍上传该数据集的方法。
 
 在文件系统中创建文件夹，填写目录名为`identity-pku-assistant`：
 ![alt text](assets/image-3.png)
@@ -75,11 +75,11 @@ export_device: auto  # choices: [cpu, auto]
 export_legacy_format: false
 " > /app/lora_merge.yaml && llamafactory-cli export /app/lora_merge.yaml 
 ```
-* 数据集选择 公共数据集->identity-pku-assistant
+* 数据集选择 我的数据集->identity-pku-assistant
 * 模型选择 公共模型->Qwen2.5-1.5B-Instruct
-![alt text](assets/image-28.png)
+![alt text](image-1.png)
 
-填写对应资源，如果单卡则选择1张卡，多卡就选择2、4、8，这里选择2，点击提交
+填写加速卡卡数，卡数与模型大小有关，并且卡数越多，相同模型大小情况下，训练速度越快。这里填写2，点击提交
 ![alt text](assets/image-17.png)
 
 训练过程中点击详情->日志
