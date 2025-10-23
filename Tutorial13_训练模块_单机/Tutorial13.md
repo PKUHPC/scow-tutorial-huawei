@@ -38,7 +38,7 @@
 
 ## 2、训练模块单机单卡/多卡训练
 在scow-ai网页中点击作业->训练
-![alt text](image.png)
+![alt text](assets/image-29.png)
 
 填写训练所需字段：
 * 镜像来源选择远程镜像
@@ -77,7 +77,7 @@ export_legacy_format: false
 ```
 * 数据集选择 我的数据集->identity-pku-assistant
 * 模型选择 公共模型->Qwen2.5-1.5B-Instruct
-![alt text](image-1.png)
+![alt text](assets/image-30.png)
 
 填写加速卡卡数，卡数与模型大小有关，并且卡数越多，相同模型大小情况下，训练速度越快。这里填写2，点击提交
 ![alt text](assets/image-17.png)
@@ -91,7 +91,7 @@ export_legacy_format: false
 
 训练完成之后进入作业目录可以看到训练完成的新模型在目录中，微调后的模型完整路径一般为`[家目录]/scow/ai/appData/[作业名]/llama-factory-merged`，注意最后的`llama-factory-merged`，复制该路径便于后续测试
 ![alt text](assets/image-21.png)
-![alt text](image-2.png)
+![alt text](assets/image-31.png)
 
 ## 3、推理验证
 得到微调后的模型完整路径，进行推理验证微调是否成功，使用nextchat应用
