@@ -5,7 +5,7 @@
 * 所需模型：Qwen/Qwen2-VL-2B-Instruct
 * 所需数据集：COCO2017
 * 所需资源：建议使用1张910B NPU运行本教程。
-* 目标：本节以Qwen2-VL-2B-Instruct模型为例，在SCOW-AI集群中创建VScode应用配置MindSpeed-MM框架使用COCO2017数据集对这个QwenVL模型进行微调
+* 目标：本节以Qwen2-VL-2B-Instruct模型为例，在SCOW-AI集群中创建VScode应用配置MindSpeed-MM框架使用COCO2017数据集对这个QwenVL模型进行微调，并给出微调前后模型推理结果对比
 * 参考文档：https://gitee.com/ascend/MindSpeed-MM/blob/2.0.0/examples/qwen2vl/README.md
 
 ## 1、启动VScode应用
@@ -22,6 +22,7 @@
 ![alt text](./assets/image-3.png)
 
 在资源中选择1张加速卡，点击提交
+
 ![alt text](./assets/image-4.png)
 
 提交成功后点击进入vscode应用
@@ -108,7 +109,7 @@ mm-convert  Qwen2VLConverter hf_to_mm \
 ![alt text](./assets/image-8.png)
 
 ## 4、修改微调配置文件
-首先使用以下命令获取创建应用时选择的模型与数据集的路径
+首先使用以下命令获取创建应用时选择的模型与数据集的路径以及工作目录
 ~~~shell
 echo $SCOW_AI_MODEL_PATH
 echo $SCOW_AI_DATASET_PATH
@@ -130,7 +131,7 @@ cp -r /data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/da
 ~~~
 
 修改~/MindSpeed-MM/examples/qwen2vl/data_2b.json文件:
-* dataset_param.preprocess_parameters.model_name_or_path:模型路径
+* dataset_param.preprocess_parameters.model_name_or_path：模型路径
 ![alt text](./assets/image-12.png)
 
 修改~/MindSpeed-MM/examples/qwen2vl/finetune_qwen2vl_2b.sh文件：
