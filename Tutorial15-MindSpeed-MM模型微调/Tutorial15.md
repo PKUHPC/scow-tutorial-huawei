@@ -49,6 +49,7 @@ cd MindSpeed-MM
 mkdir logs
 mkdir data
 mkdir ckpt
+mkdir save_dir
 ~~~
 
 分别运行下面的命令，安装torch和torch_npu，可参考https://www.hiascend.com/document/detail/zh/Pytorch/700/configandinstg/instg/insg_0004.html
@@ -105,3 +106,110 @@ mm-convert  Qwen2VLConverter hf_to_mm \
 
 如果出现以下输出则转换成功
 ![alt text](image-8.png)
+
+## 4、修改微调配置文件
+首先使用以下命令获取创建应用时选择的模型与数据集的路径
+~~~shell
+echo $SCOW_AI_MODEL_PATH
+echo $SCOW_AI_DATASET_PATH
+echo $WORK_DIR
+~~~
+![alt text](image-16.png)
+
+* 模型路径：/data/.shared/official/model/Qwen/Qwen2-VL-2B-Instruct/latest/Qwen2-VL-2B-Instruct
+* 数据集路径：/data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/data
+* 工作目录：/data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251022-061715
+
+注：每个用户的模型路径与数据集路径可能不同，需根据实际情况决定。
+
+运行下面的命令移动数据集
+~~~shell
+cd ~/MindSpeed-MM
+# 下面命令格式为cp -r 数据集路径/* ./data/
+cp -r /data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/data/* ./data/
+~~~
+
+修改~/MindSpeed-MM/examples/qwen2vl/data_2b.json文件:
+* dataset_param.preprocess_parameters.model_name_or_path:模型路径
+![alt text](image-12.png)
+
+修改~/MindSpeed-MM/examples/qwen2vl/finetune_qwen2vl_2b.sh文件：
+* NPUS_PER_NODE=1
+![alt text](image-13.png)
+* train-iters=100
+![alt text](image-14.png)
+* save-interval=50
+* eval-interval=50
+* eval-iters=25
+![alt text](image-15.png)
+
+## 4、开始微调
+运行微调
+~~~shell
+cd ~/MindSpeed-MM
+bash examples/qwen2vl/finetune_qwen2vl_2b.sh
+~~~
+
+微调完成后运行下面的命令将微调后的模型转换为huggingface格式
+~~~shell
+mm-convert  Qwen2VLConverter mm_to_hf \
+  --cfg.save_hf_dir $WORK_DIR/Qwen2-VL-2B-Instruct-finetuned \
+  --cfg.mm_dir "save_dir" \
+  --cfg.hf_config.hf_dir $SCOW_AI_MODEL_PATH \
+  --cfg.parallel_config.llm_pp_layers [28] \
+  --cfg.parallel_config.vit_pp_layers [32] \
+  --cfg.parallel_config.tp_size 1
+~~~
+
+## 5、微调前后模型推理效果对比
+运行下面的命令安装必要的环境包
+~~~shell
+pip install qwen_vl_utils
+~~~
+
+### 5.1、微调前模型推理
+修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.json文件：
+* tokenizer.from_pretrained：模型路径
+![alt text](image-17.png)
+* image_processer_path：模型路径/preprocessor_config.json
+* image_path：./data/COCO2017/train2017/000000033471.jpg
+* prompts：What feature can be seen on the back of the bus?
+![alt text](image-19.png)
+
+运行推理命令
+~~~shell
+bash examples/qwen2vl/inference_qwen2vl_2b.sh
+~~~
+
+得到如下结果（the feature can be seen on the back of the bus(139,42),(703,771)）
+![alt text](image-20.png)
+
+### 5.2、微调后模型推理
+修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.json文件：
+* tokenizer.from_pretrained：工作目录/Qwen2-VL-2B-Instruct-finetuned
+![alt text](image-21.png)
+* image_processer_path：工作目录/Qwen2-VL-2B-Instruct-finetuned/preprocessor_config.json
+![alt text](image-24.png)
+
+修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.sh文件：
+* LOAD_PATH：save_dir
+![alt text](image-23.png)
+
+运行推理命令
+~~~shell
+bash examples/qwen2vl/inference_qwen2vl_2b.sh
+~~~
+
+得到如下结果（On the back of the bus, there is a large advertisement for a drink.）
+![alt text](image-25.png)
+
+### 5.3、推理结果对比
+推理时我们都给了以下参数：
+* image：./data/COCO2017/train2017/000000033471.jpg
+![alt text](image-26.png)
+* prompt：What feature can be seen on the back of the bus?
+
+微调前模型推理结果：`the feature can be seen on the back of the bus(139,42),(703,771)`
+微调后模型推理结果：`On the back of the bus, there is a large advertisement for a drink.`
+
+可以发现微调后的模型更能理解我们给出的prompt并给出更为准确的答案
