@@ -10,15 +10,19 @@
 
 ## 1、启动VScode应用
 根据文档的配套环境版本，我们选择CANN版本为8.1.RC1、Python版本为3.10的镜像，镜像链接在开头已经给出
+
 ![alt text](./assets/image-7.png)
 
 进入SCOW-AI集群后点击作业->应用进入创建应用页面
+
 ![alt text](./assets/image-1.png)
 
 选择远程镜像，填入给出的镜像链接
+
 ![alt text](./assets/image-2.png)
 
 添加算法、数据集、模型，算法选择code-server，数据集选择COCO2017，模型选择Qwen/Qwen2-VL-2B-Instruct。并且在运行命令中填入${SCOW_AI_ALGORITHM_PATH}/bin/code-server，以确保在启动应用时运行code-server算法
+
 ![alt text](./assets/image-3.png)
 
 在资源中选择1张加速卡，点击提交
@@ -26,9 +30,11 @@
 ![alt text](./assets/image-4.png)
 
 提交成功后点击进入vscode应用
+
 ![alt text](./assets/image-5.png)
 
 进入应用后打开root文件夹以及终端，至此VScode应用启动完成
+
 ![alt text](./assets/image-6.png)
 
 ## 2、配置微调环境
@@ -106,6 +112,7 @@ mm-convert  Qwen2VLConverter hf_to_mm \
 ~~~
 
 如果出现以下输出则转换成功
+
 ![alt text](./assets/image-8.png)
 
 ## 4、修改微调配置文件
@@ -115,6 +122,7 @@ echo $SCOW_AI_MODEL_PATH
 echo $SCOW_AI_DATASET_PATH
 echo $WORK_DIR
 ~~~
+
 ![alt text](./assets/image-16.png)
 
 * 模型路径：/data/.shared/official/model/Qwen/Qwen2-VL-2B-Instruct/latest/Qwen2-VL-2B-Instruct
@@ -132,16 +140,20 @@ cp -r /data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/da
 
 修改~/MindSpeed-MM/examples/qwen2vl/data_2b.json文件:
 * dataset_param.preprocess_parameters.model_name_or_path：模型路径
+
 ![alt text](./assets/image-12.png)
 
 修改~/MindSpeed-MM/examples/qwen2vl/finetune_qwen2vl_2b.sh文件：
 * NPUS_PER_NODE=1
+
 ![alt text](./assets/image-13.png)
 * train-iters=100
+
 ![alt text](./assets/image-14.png)
 * save-interval=50
 * eval-interval=50
 * eval-iters=25
+
 ![alt text](./assets/image-15.png)
 
 ## 4、开始微调
@@ -171,10 +183,12 @@ pip install qwen_vl_utils
 ### 5.1、微调前模型推理
 修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.json文件：
 * tokenizer.from_pretrained：模型路径
+
 ![alt text](./assets/image-17.png)
 * image_processer_path：模型路径/preprocessor_config.json
 * image_path：./data/COCO2017/train2017/000000033471.jpg
 * prompts：What feature can be seen on the back of the bus?
+
 ![alt text](./assets/image-19.png)
 
 运行推理命令
@@ -183,17 +197,21 @@ bash examples/qwen2vl/inference_qwen2vl_2b.sh
 ~~~
 
 得到如下结果（the feature can be seen on the back of the bus(139,42),(703,771)）
+
 ![alt text](./assets/image-20.png)
 
 ### 5.2、微调后模型推理
 修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.json文件：
 * tokenizer.from_pretrained：工作目录/Qwen2-VL-2B-Instruct-finetuned
+
 ![alt text](./assets/image-21.png)
 * image_processer_path：工作目录/Qwen2-VL-2B-Instruct-finetuned/preprocessor_config.json
+
 ![alt text](./assets/image-24.png)
 
 修改~/MindSpeed-MM/examples/qwen2vl/inference_qwen2vl_2b.sh文件：
 * LOAD_PATH：save_dir
+
 ![alt text](./assets/image-23.png)
 
 运行推理命令
@@ -202,11 +220,13 @@ bash examples/qwen2vl/inference_qwen2vl_2b.sh
 ~~~
 
 得到如下结果（On the back of the bus, there is a large advertisement for a drink.）
+
 ![alt text](./assets/image-25.png)
 
 ### 5.3、推理结果对比
 推理时我们都给了以下参数：
 * image：./data/COCO2017/train2017/000000033471.jpg
+
 ![alt text](./assets/image-26.png)
 * prompt：What feature can be seen on the back of the bus?
 
