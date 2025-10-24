@@ -614,7 +614,7 @@ app文件夹打开，里面包含子文件夹和文件
 完整的VSCode应用包含的左侧app文件夹、右侧上半区域的文件显示窗口、和右侧下半区域的终端
 ![alt text](../tutorial_scow_for_ai.assets/1.1.8-HW-vscode-check-app-folder.png)
 
-# 2、进行配置
+## 2、进行配置
 
 2.1 在app文件夹中创建config.yaml文件
 2.1.1 拷贝下面代码：
@@ -659,7 +659,7 @@ import torch_npu
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-model_dir = os.environ.get('SCOW_AI_MODEL_PATH', './models/Qwen2-1.5B-Instruct')
+model_dir =  './models/Qwen2-1.5B-Instruct')
 print(f"Model downloaded to: {model_dir}")
 
 
@@ -737,7 +737,7 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 2.3.4 粘贴到已经打开的空白的 step2_refined_model_reasoning.py 文件，这样就完成了文件创建
 ![alt text](../tutorial_scow_for_ai.assets/2.3.4-HW-check-step2-py.png)
 
-# 3、用镜像对模型进行推理、微调
+## 3、用镜像对模型进行推理、微调
 
 3.1 使用还没有经过微调的模型进行推理
 
