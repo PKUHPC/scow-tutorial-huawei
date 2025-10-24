@@ -585,7 +585,7 @@
 前面步骤中创建的数据集所在目录
 ![alt text](image-78.png)
 
-# 2、用LLaMA-Factory交互应用对Qwen模型进行微调
+## 2、用LLaMA-Factory交互应用对Qwen模型进行微调
 这里主要会用到 Train 训练来进行模型微调 和 Chat 对话来验证模型微调前后的比较
 2.1 点击 Chat 对话，询问问题，让模型进行推理，查看微调前的模型表现
 ![alt text](image-79.png)

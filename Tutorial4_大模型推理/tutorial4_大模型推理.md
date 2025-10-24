@@ -92,6 +92,7 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 
 * 勾选添加类型 - 模型，下拉菜单中，选取 我的模型；模型下拉菜单中，选取 Qwen(你的用户名) 模型，版本下拉菜单中，选取 Qwen3-4B
 
+
 ![alt text](image-23.png)
 
 3.1.5 资源部分不需要修改，也可以根据实际需要在 单节点加速卡卡数 中修改为2/4/8（单节点上限是8卡，卡数越多，对大模型训练的时间会相应缩短）然后点击 提交 按钮
