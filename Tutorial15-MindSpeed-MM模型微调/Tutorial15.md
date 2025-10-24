@@ -11,7 +11,7 @@
 ## 1、启动VScode应用
 根据文档的配套环境版本，我们选择CANN版本为8.1.RC1、Python版本为3.10的镜像，镜像链接在开头已经给出
 
-![alt text](./assets/image-7.png)
+![alt text](./assets/image-27.png)
 
 进入SCOW-AI集群后点击作业->应用进入创建应用页面
 
@@ -19,9 +19,9 @@
 
 选择远程镜像，填入给出的镜像链接
 
-![alt text](./assets/image-2.png)
+![alt text](./assets/image-7.png)
 
-添加算法、数据集、模型，算法选择code-server，数据集选择COCO2017，模型选择Qwen/Qwen2-VL-2B-Instruct。并且在运行命令中填入${SCOW_AI_ALGORITHM_PATH}/bin/code-server，以确保在启动应用时运行code-server算法
+添加算法、数据集、模型，算法选择`code-server`，数据集选择`COCO2017`，模型选择`Qwen/Qwen2-VL-2B-Instruct`。并且在运行命令中填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`，以确保在启动应用时运行code-server算法
 
 ![alt text](./assets/image-3.png)
 
@@ -59,7 +59,7 @@ mkdir ckpt
 mkdir save_dir
 ~~~
 
-分别运行下面的命令，安装torch和torch_npu，可参考https://www.hiascend.com/document/detail/zh/Pytorch/700/configandinstg/instg/insg_0004.html
+分别运行下面的命令，安装torch和torch_npu，具体版本和安装包可参考[https://www.hiascend.com/document/detail/zh/Pytorch/700/configandinstg/instg/insg_0004.html](https://www.hiascend.com/document/detail/zh/Pytorch/700/configandinstg/instg/insg_0004.html)
 ~~~shell
 # 下载软件包
 wget https://download.pytorch.org/whl/cpu/torch-2.1.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
@@ -101,7 +101,7 @@ pip install -e .
 ~~~
 
 ## 3、模型格式转换
-运行下面的命令对模型进行格式转换
+在终端运行下面的命令对模型进行格式转换，转换后的模型保存在`./ckpt/mm_path/Qwen2-VL-2B-Instruct`路径下
 ~~~shell
 mm-convert  Qwen2VLConverter hf_to_mm \
   --cfg.mm_dir "ckpt/mm_path/Qwen2-VL-2B-Instruct" \
@@ -116,7 +116,7 @@ mm-convert  Qwen2VLConverter hf_to_mm \
 ![alt text](./assets/image-8.png)
 
 ## 4、修改微调配置文件
-首先使用以下命令获取创建应用时选择的模型与数据集的路径以及工作目录
+首先使用以下命令获取创建应用时选择的模型与数据集的路径以及工作目录，后续修改脚本、运行命令都会用到，请务必实际运行得到结果
 ~~~shell
 echo $SCOW_AI_MODEL_PATH
 echo $SCOW_AI_DATASET_PATH
@@ -163,7 +163,7 @@ cd ~/MindSpeed-MM
 bash examples/qwen2vl/finetune_qwen2vl_2b.sh
 ~~~
 
-微调完成后运行下面的命令将微调后的模型转换为huggingface格式
+微调完成后运行下面的命令将微调后的模型转换为huggingface格式，将转换后的模型保存到工作目录`$WORK_DIR`中
 ~~~shell
 mm-convert  Qwen2VLConverter mm_to_hf \
   --cfg.save_hf_dir $WORK_DIR/Qwen2-VL-2B-Instruct-finetuned \
@@ -231,6 +231,7 @@ bash examples/qwen2vl/inference_qwen2vl_2b.sh
 * prompt：What feature can be seen on the back of the bus?
 
 微调前模型推理结果：`the feature can be seen on the back of the bus(139,42),(703,771)`
+
 微调后模型推理结果：`On the back of the bus, there is a large advertisement for a drink.`
 
 可以发现微调后的模型更能理解我们给出的prompt并给出更为准确的答案
