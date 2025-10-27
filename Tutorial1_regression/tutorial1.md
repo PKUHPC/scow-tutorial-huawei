@@ -24,7 +24,7 @@
 ![alt text](assets/image-5.png)
 
 进到vscode应用中打开terminal
-![alt text](assets/image-6.png)
+![alt text](image.png)
 
 运行下面的命令创建文件夹、配置环境
 ```shell
@@ -50,7 +50,7 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ## 3、运行训练
 在tutorial1下创建Python脚本
 ```shell
-mkidr tutorial1.py
+echo "" > tutorial1.py
 ```
 在tutorial1.py中放入下面的代码
 ```python
@@ -153,6 +153,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+
+运行下面的命令开始训练
+```shell
+python tutorial1.py
 ```
 
 ## 4、查看结果
