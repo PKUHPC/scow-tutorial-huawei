@@ -23,8 +23,8 @@
 * $SCOW_AI_MODEL_PATH：模型存放的统一路径
 * $SCOW_AI_DATASET_PATH：数据集存放的统一路径
 * $SCOW_AI_ALGORITHM_PATH：算法存放的统一路径
-
-
+9. 基础镜像
+* 将 app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10 作为基础镜像，粘贴到 远程镜像地址框中
 ## issue
 如果遇到问题，欢迎提交issue。
 
