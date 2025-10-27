@@ -98,23 +98,23 @@ modelscope download --model google-bert/bert-base-uncased --local-dir ./bert-bas
 
 ## 3. 运行模型微调
 
-### 3.1 打开新的终端
+打开新的终端
 
 ![alt text](assets/image-5.png)
 
-### 3.2 创建新文件
+创建新文件
 
 ![alt text](assets/image-6.png)
 
-### 3.3 输入文件名：run.py 
+输入文件名：run.py 
 
 ![alt text](assets/image-7.png)
 
-### 3.4 将以下代码复制粘贴到新文件内 
+将以下代码复制粘贴到新文件内 
 
 ![alt text](assets/image-8.png)
 
-### 代码如下：
+代码如下：
 ```
 from transformers import AutoModelForSequenceClassification
 from datasets import load_dataset
@@ -231,7 +231,7 @@ for epoch in range(num_epochs):
 model.save_pretrained('model_trained')
 ```
 
-### 3.5 执行命令
+执行命令
 ```
 python run.py
 ```
