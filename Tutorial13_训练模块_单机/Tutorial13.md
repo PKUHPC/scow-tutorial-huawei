@@ -1,6 +1,6 @@
 # Tutorial13: 在SCOW-AI集群的训练模块中使用LLaMA-Factory进行单机单卡/多卡模型微调
 
-* 集群类型：SCOW AI集群
+* 集群类型：SCOW智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供

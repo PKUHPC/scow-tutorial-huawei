@@ -1,6 +1,6 @@
 # Tutorial15: 在SCOW-AI集群配置MindSpeed-MM框架进行模型微调
 
-* 集群类型：SCOW AI集群
+* 集群类型：SCOW智算平台
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-ubuntu22.04-py3.10
 * 所需模型：Qwen/Qwen2-VL-2B-Instruct
 * 所需数据集：COCO2017
