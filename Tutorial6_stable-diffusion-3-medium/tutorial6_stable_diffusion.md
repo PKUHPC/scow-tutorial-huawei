@@ -63,7 +63,7 @@ conda init bash
 # 7. 退出命令行再重新连接, 让conda生效
 ```
 
-### 1.4 安装依赖、注册ipykernel
+### 1.4 安装依赖
 ```
 # 在Shell命令行中执行：
 
