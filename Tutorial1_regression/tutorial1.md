@@ -24,7 +24,7 @@
 ![alt text](assets/image-5.png)
 
 进到vscode应用中打开terminal
-![alt text](image.png)
+![alt text](assets/image-13.png)
 
 运行下面的命令创建文件夹、配置环境
 ```shell
