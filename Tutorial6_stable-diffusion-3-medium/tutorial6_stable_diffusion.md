@@ -2,7 +2,7 @@
 
 * 集群类型：超算集群
 * 所需镜像：无
-* 所需模型：集群内下载（stable-diffusion-3-medium-diffusers）
+* 所需模型：教程内下载（stable-diffusion-3-medium-diffusers）
 * 所需数据集：教程内提供
 * 所需硬件资源：建议使用1张910B NPU运行本教程。
 * 目标：本节旨在展示使用 stable-diffusion-3-medium-diffusers 模型进行文生图任务。
@@ -96,6 +96,7 @@ pip install  modelscope==1.22.3
 ![alt text](assets/image-5.png)
 
 ```
+# 通过命令行下载模型和数据
 modelscope download --model stabilityai/stable-diffusion-3-medium-diffusers --local-dir stabilityai/stable-diffusion-3-medium-diffusers
 ```
 
