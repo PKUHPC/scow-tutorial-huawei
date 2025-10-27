@@ -2,7 +2,7 @@
 
 * 集群类型：超算平台
 * 所需镜像：无
-* 所需模型：集群内下载（bert-base-uncased）
+* 所需模型：教程内下载（bert-base-uncased）
 * 所需数据集：教程内提供
 * 所需硬件资源：建议使用1张910B NPU运行本教程。
 * 目标：本节旨在使用 bert-base-uncased 模型展示Bert模型微调的过程。
