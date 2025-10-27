@@ -102,23 +102,23 @@ modelscope download --model stabilityai/stable-diffusion-3-medium-diffusers --lo
 
 ## 3. 文生图
 
-### 3.1 打开新的终端
+打开新的终端
 
 ![alt text](assets/image-6.png)
 
-### 3.2 创建新文件
+创建新文件
 
 ![alt text](assets/image-7.png)
 
-### 3.3 输入文件名：run.py 
+输入文件名：run.py 
 
 ![alt text](assets/image-8.png)
 
-### 3.4将以下代码复制粘贴到新文件内 
+将以下代码复制粘贴到新文件内 
 
 ![alt text](assets/image-9.png)
 
-### 代码如下：
+代码如下：
 ```
 import torch
 import torch_npu
@@ -159,7 +159,7 @@ for i in range(10):
     image.save(f"{i}.png")
 ```
 
-### 3.5 运行以下命令，从文字生成图像：
+运行以下命令，从文字生成图像：
 ```
 python run.py
 ```
