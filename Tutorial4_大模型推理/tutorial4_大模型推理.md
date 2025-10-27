@@ -1,16 +1,16 @@
 # Tutorial4: 大模型推理
 
 * 集群类型：SCOW HPC集群和SCOW AI集群
-* 所需镜像：无
+* 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
 * 所需模型：Qwen3-4B
 * 所需数据集：无
 * 所需资源：建议使用1张910B NPU运行本教程。
 * 目标：本节旨在使用 [Qwen3-4B] (https://modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507) 模型展示大模型推理。
 
 分以下几步来实现：
-1.在超算中心，通过shell的方式下载模型
-2.在智算中心，添加了下载的模型到 我的模型里面
-3.在智算中心，创建VSCode交互应用，使用下载的大模型进行推理
+1.在超算集群，通过shell的方式下载模型
+2.在智算集群，添加了下载的模型到 我的模型里面
+3.在智算集群，创建VSCode交互应用，使用下载的大模型进行推理
 
 ## 1、使用SCOW HPC集群下载模型
 
