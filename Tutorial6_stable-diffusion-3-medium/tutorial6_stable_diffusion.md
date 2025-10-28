@@ -72,9 +72,11 @@ conda activate tutorial
 
 # 添加昇腾相关的环境变量
 mkdir -p ${CONDA_PREFIX}/etc/conda/activate.d/
+
 echo '#!/bin/bash
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 source /usr/local/Ascend/nnal/atb/set_env.sh' > ${CONDA_PREFIX}/etc/conda/activate.d/npu_load_env.sh
+
 chmod +x ${CONDA_PREFIX}/etc/conda/activate.d/npu_load_env.sh
 conda deactivate tutorial
 conda activate tutorial
