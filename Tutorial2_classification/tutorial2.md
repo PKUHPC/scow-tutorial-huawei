@@ -2,7 +2,7 @@
 
 * 集群类型：SCOW超算平台
 * 所需镜像：无
-* 所需模型：无
+* 所需模型：教程内提供
 * 所需数据集：教程内提供
 * 所需资源：建议使用1张910B NPU运行本教程。
 * 目标：本节旨在展示使用‌CLIP模型进行图像文本分类的简单案例，使用OPENAI提供的CLIP库以及给出的示例图片。
@@ -58,11 +58,11 @@ cd ..
 ![alt text](assets/image-11.png)
 
 ## 3、模型推理
-在tutorial1下创建Python脚本
+在tutorial2下创建Python脚本
 ```shell
 echo "" > tutorial2.py
 ```
-在tutorial1.py中放入下面的代码
+在tutorial2.py中放入下面的代码
 ```python
 import torch
 import torch_npu
