@@ -131,11 +131,11 @@ echo $WORK_DIR
 
 注：每个用户的模型路径与数据集路径可能不同，需根据实际情况决定。
 
-运行下面的命令移动数据集
+运行下面的命令配置数据集
 ~~~shell
 cd ~/MindSpeed-MM
-# 下面命令格式为cp -r 数据集路径/* ./data/
-cp -r /data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/data/* ./data/
+ln -s $SCOW_AI_DATASET_PATH/* ./data/
+python examples/qwen2vl/llava_instruct_2_mllm_demo_format.py
 ~~~
 
 修改~/MindSpeed-MM/examples/qwen2vl/data_2b.json文件:
