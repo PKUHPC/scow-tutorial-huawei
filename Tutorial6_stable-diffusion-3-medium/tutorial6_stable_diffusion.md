@@ -20,7 +20,7 @@ Stable Diffusion 是由 Stability AI 开发的一个开源的深度学习模型�
 
 集群入口: https://scow-zy.pku.edu.cn/
 
-### 1.2 在SCOW HPC集群中安装环境
+### 1.2 在超算平台中安装环境
 
 我们的教程使用 VSCode 运行，需要在 “交互式应用” 中创建应用。
 
