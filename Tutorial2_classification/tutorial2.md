@@ -58,11 +58,11 @@ cd ..
 ![alt text](assets/image-11.png)
 
 ## 3、模型推理
-在tutorial1下创建Python脚本
+在tutorial2下创建Python脚本
 ```shell
 echo "" > tutorial2.py
 ```
-在tutorial1.py中放入下面的代码
+在tutorial2.py中放入下面的代码
 ```python
 import torch
 import torch_npu
