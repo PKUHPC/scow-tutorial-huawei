@@ -13,9 +13,10 @@
 
 ![alt text](./assets/image-27.png)
 
-进入SCOW-AI集群后点击作业->应用进入创建应用页面
+进入SCOW-AI集群后点击作业->应用进入创建应用页面，选择创建vscode
 
 ![alt text](./assets/image-1.png)
+![alt text](image.png)
 
 选择远程镜像，填入给出的镜像链接
 
