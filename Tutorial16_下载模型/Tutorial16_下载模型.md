@@ -5,14 +5,14 @@
 * 所需模型：无
 * 所需数据集：无
 * 所需资源：
-* 目标：本节旨在使用超算平台展示如何下载大模型。
+* 目标：本节旨在使用超算平台展示如何下载大模型 [Qwen3-4B] (https://modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507) 。
 
 ## 1、使用超算平台下载模型
 
 1.1.1 登录SCOW平台，选取超算平台，进入HPC集群
 ![alt text](assets/image.png)
 
-1.1.2 点击 Shell > Ascend-CranSched > login01 ，连接到集群的login节点，等待十几秒左右，能看到
+1.1.2 点击 Shell > 选择集群（这里Ascend-CranSched是HPC集群的名称） > 选择节点（这里login01是节点的名称） ，连接到集群的login节点，等待十几秒左右，能看到
 ![alt text](assets/image-17.png)
 
 1.1.3 拷贝命令 pwd 粘贴到界面，并按 回车键，确保在正确的目录下：/data/home/你的用户名

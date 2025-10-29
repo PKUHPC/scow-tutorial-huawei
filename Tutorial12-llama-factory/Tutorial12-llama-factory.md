@@ -18,7 +18,7 @@
 根据[Tutorial17_添加和管理数据集](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
 
 1.2 创建交互式应用
-1.2.1 然后点击 作业 > ascend-k8s > 应用 > 创建应用
+1.2.1 然后点击 作业 > 选择集群（这里ascend-k8s是AI集群的名称） > 应用 > 创建应用
 ![alt text](assets/image-70.png)
 
 1.2.2 进入AI集群的应用页面，点击LLaMA-Factory图标，创建LLaMA-Factory应用

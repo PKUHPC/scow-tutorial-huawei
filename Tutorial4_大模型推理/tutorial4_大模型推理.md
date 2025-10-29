@@ -1,6 +1,6 @@
 # Tutorial4: 大模型推理
 
-* 集群类型：SCOW HPC集群和SCOW AI集群
+* 集群类型：超算平台和智算平台
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
 * 所需模型：Qwen3-4B
 * 所需数据集：无
@@ -12,34 +12,11 @@
 2.在智算集群，添加了下载的模型到 我的模型里面
 3.在智算集群，创建VSCode交互应用，使用下载的大模型进行推理
 
-## 1、使用SCOW HPC集群下载模型
+## 1、使用超算平台下载模型
 
-1.1.1 登录SCOW平台，选取超算平台，进入HPC集群
-![alt text](assets/image.png)
+根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/Tutorial16_下载模型.md) 下载模型
 
-1.1.2 点击 Shell > Ascend-CranSched > login01 ，连接到集群的login节点，等待十几秒左右，能看到
-![alt text](assets/image-17.png)
-
-1.1.3 拷贝命令 pwd 粘贴到界面，并按 回车键，确保在正确的目录下：/data/home/你的用户名
-![alt text](assets/image-18.png)
-
-1.1.4 拷贝命令 mkdir model 粘贴到界面，并按 回车键，这样就在当前目录下新创建了一个名为 model 的目录，下载的模型都可以统一放在这个目录下面
-
-1.1.4 拷贝命令 cd model 粘贴到界面，并按 回车键，这样就进入到刚新创建的名为 model 的目录里
-![alt text](assets/image-19.png)
-
-1.1.5 拷贝命令 pip install modelscope 粘贴到界面，并按 回车键。
-这里是安装了modelscope工具，次工具由模型下载的镜像网站提供
-
-1.1.6 拷贝命令 modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/Qwen3-4B-Instruct-2507 粘贴到界面，并按 回车键。
-这里是通过刚安装的modelscope这个工具去镜像网站下载模型 Qwen3-4B-Instruct-2507
-
-```bash
-pip install modelscope
-modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/Qwen3-4B-Instruct-2507
-```
-
-## 2、使用使用SCOW AI集群管理模型
+## 2、使用智算平台管理模型
 2.1 选取智算平台，进入AI集群
 
 2.2 点击 模型 > 我的模型，进入提交作业页面
@@ -51,7 +28,6 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 名称 QWen；集群 下拉菜单 ascend-k8s。
 因为刚下载模型的是 Qwen3-4B-Instruct-2507，这里取的名称为QWen。可以根据下载的模型的名称进行命名。
 ![alt text](assets/image-11.png)
-
 
 2.4 给模型添加版本
 点击 + 号，给刚下载的模型创建版本号
@@ -72,7 +48,7 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 ## 3、使用大模型进行推理
 
 3.1 创建VSCode交互式应用
-3.1.1 点击 作业 > ascend-k8s > 应用 > 创建应用
+3.1.1 点击 作业 > 选择集群（这里ascend-k8s是AI集群的名称） > 应用 > 创建应用
 ![alt text](assets/image-20.png)
 
 3.1.2 点击VSCode
@@ -91,7 +67,6 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 * 勾选添加类型 - 算法，下拉菜单中，选取 公共算法；算法下拉菜单中，选取 code-server(official) 算法，版本下拉菜单中，选取 4.95.3，此时应可以看到算法描述部分显示启动命令，与3.1.3步骤中的启动命令是一致的
 
 * 勾选添加类型 - 模型，下拉菜单中，选取 我的模型；模型下拉菜单中，选取 Qwen(你的用户名) 模型，版本下拉菜单中，选取 Qwen3-4B
-
 
 ![alt text](assets/image-23.png)
 
