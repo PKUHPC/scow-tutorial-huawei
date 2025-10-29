@@ -16,7 +16,7 @@
 1.1 准备数据集
 
 根据[Tutorial17_添加和管理数据集]（https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md）准备数据集
-
+根据把[Tutorial17_添加和管理数据集](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
 1.1.1 登录SCOW平台，选取智算平台，进入AI集群
 ![alt text](assets/image-52.png)
 
