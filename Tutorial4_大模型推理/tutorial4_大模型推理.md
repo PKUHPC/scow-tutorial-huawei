@@ -4,7 +4,7 @@
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
 * 所需模型：Qwen3-4B
 * 所需数据集：无
-* 所需资源：建议使用1张910B NPU运行本教程。
+* 所需资源：单机单卡，建议使用1张910B NPU运行本教程。
 * 目标：本节旨在使用 [Qwen3-4B] (https://modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507) 模型展示大模型推理。
 
 分以下几步来实现：
