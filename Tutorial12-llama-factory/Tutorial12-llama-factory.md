@@ -4,7 +4,7 @@
 * 所需镜像：app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供
-* 所需资源：建议使用1张910B NPU运行本教程。
+* 所需资源：单节点单卡，建议使用1张910B NPU运行本教程。
 * 目标：本节以Qwen2.5-1.5B-Instruct模型为例，使用LLaMA-Factory交互应用对这个Qwen大模型完成微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 分以下几步来实现：
@@ -13,7 +13,9 @@
 
 ## 1、拉取镜像并安装
 
-1.1 准备数据集，创建交互应用
+1.1 准备数据集
+
+根据[Tutorial17_添加和管理数据集]（https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md）准备数据集
 
 1.1.1 登录SCOW平台，选取智算平台，进入AI集群
 ![alt text](assets/image-52.png)
@@ -86,20 +88,22 @@
 点击数据集名称前的 + 加号，+ 加号变成 - 减号后，展开查看数据集的版本已经添加成功：
 ![alt text](assets/image-69.png)
 
-1.1.5 然后点击 作业 > ascend-k8s > 应用 > 创建应用
+1.2 创建交互式应用
+1.2.1 然后点击 作业 > ascend-k8s > 应用 > 创建应用
 ![alt text](assets/image-70.png)
 
-1.1.6 进入AI集群的应用页面，点击LLaMA-Factory图标，创建LLaMA-Factory应用
+1.2.2 进入AI集群的应用页面，点击LLaMA-Factory图标，创建LLaMA-Factory应用
 ![alt text](assets/image-71.png)
 
-1.1.7 选取大模型
+1.3 选取大模型
 
 在创建LLaMA-Factory页面中，进行配置：
 
-应用配置中，选择 默认镜像，app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
+1.3.1 应用配置中
+选择 默认镜像，app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
 ![alt text](assets/image-72.png)
 
-1.1.8 添加模型和算法
+1.3.2 添加模型和算法
 
 * 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-1.5B-Instruct(official) 模型，版本下拉菜单中，选取 latest
 ![alt text](assets/image-73.png)
@@ -107,7 +111,7 @@
 * 勾选添加类型 - 数据集，下拉菜单中，选取 我的数据集；数据集下拉菜单中，选取刚创建的 identity（这里有你的用户名） 数据集，版本下拉菜单中，选取刚在数据集中设置的版本号；有多个版本的话，选取恰当的版本
 ![alt text](assets/image-74.png)
 
-1.1.9 资源部分不需要修改，也可以根据实际需要在 单节点加速卡卡数 中修改为2/4/8（单节点上限是8卡，卡数越多，对大模型训练的时间会相应缩短）然后点击 提交 按钮
+1.3.3 本教程采用单节点单卡，资源部分不需要修改。也可以根据实际需要，如单节点多卡的话，在 单节点加速卡卡数 中修改为2/4/8（单节点上限是8卡，卡数越多，对大模型训练的时间会相应缩短）然后点击 提交 按钮
 ![alt text](assets/image-75.png)
 
 1.1.10 进入新创建的LLaMA-Factory应用的浏览器界面
