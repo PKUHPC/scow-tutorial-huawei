@@ -18,7 +18,7 @@
 ![alt text](assets/image-2.png)
 
 节点数填写1，单节点加速卡卡数填写2，最长运行时间适当填写，最后点击提交
-![alt text](image.png)
+![alt text](assets/image-3.png)
 
 在跳转到的页面中点击进入
 ![alt text](assets/image-5.png)
@@ -201,3 +201,6 @@ if __name__ == "__main__":
 ```shell
 python tutorial3.py
 ```
+
+最后可以看到如下日志输出，可以知道经过简单的训练后，分类成功率能够到达61%左右
+![alt text](assets/image-6.png)
