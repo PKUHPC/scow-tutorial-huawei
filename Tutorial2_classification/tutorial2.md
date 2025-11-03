@@ -13,19 +13,24 @@
 
 ## 1、环境准备
 切换到超算平台中
+
 ![alt text](assets/image.png)
 
 点击交互式应用->创建应用进入创建界面，选择vscode应用
+
 ![alt text](assets/image-1.png)
 ![alt text](assets/image-2.png)
 
 节点数填写1，单节点加速卡卡数填写1，最长运行时间适当填写，最后点击提交
+
 ![alt text](assets/image-4.png)
 
 在跳转到的页面中点击进入
+
 ![alt text](assets/image-5.png)
 
 进到vscode应用中打开terminal
+
 ![alt text](assets/image-14.png)
 
 运行下面的命令创建文件夹、配置环境
@@ -44,17 +49,21 @@ cd ..
 
 ## 2、数据准备
 供模型调用的图像如下：
+
 ![alt text](assets/image-8.png)
 
 能够看出是CLIP模型的预训练和预测流程图，后面将调用CLIP对本图像进行分类
 
 点击[图像链接](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial2_classification/CLIP.png)进入，点击下载
+
 ![alt text](assets/image-9.png)
 
 记住图片下载的路径，通过拖动的方式将图片传到tutorial2文件夹下
+
 ![alt text](assets/image-10.png)
 
 最后得到的文件夹结构如下
+
 ![alt text](assets/image-11.png)
 
 ## 3、模型推理
@@ -97,7 +106,9 @@ python tutorial2.py
 
 ## 4、推理结果
 推理结果如下：
+
 ![alt text](assets/image-12.png)
 
 可以看到a diagram对应的百分比最高，可知该图像最符合diagram的描述，与事实相符。
+
 ![alt text](assets/image-13.png)

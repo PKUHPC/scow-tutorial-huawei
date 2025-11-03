@@ -11,19 +11,24 @@
 
 ## 1、环境准备
 切换到超算平台中
+
 ![alt text](assets/image.png)
 
 点击交互式应用->创建应用进入创建界面，选择vscode应用
+
 ![alt text](assets/image-1.png)
 ![alt text](assets/image-2.png)
 
 节点数填写1，单节点加速卡卡数填写2，最长运行时间适当填写，最后点击提交
+
 ![alt text](assets/image-3.png)
 
 在跳转到的页面中点击进入
+
 ![alt text](assets/image-5.png)
 
 进到vscode应用中打开terminal
+
 ![alt text](assets/image-13.png)
 
 运行下面的命令创建文件夹、配置环境
@@ -203,4 +208,5 @@ python tutorial3.py
 ```
 
 最后可以看到如下日志输出，可以知道经过简单的训练后，分类成功率能够到达61%左右
+
 ![alt text](assets/image-6.png)

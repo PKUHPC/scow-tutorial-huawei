@@ -11,19 +11,24 @@
 
 ## 1、环境准备
 切换到超算平台中
+
 ![alt text](assets/image.png)
 
 点击交互式应用->创建应用进入创建界面，选择vscode应用
+
 ![alt text](assets/image-1.png)
 ![alt text](assets/image-2.png)
 
 节点数填写1，单节点加速卡卡数填写1，最长运行时间适当填写，最后点击提交
+
 ![alt text](assets/image-4.png)
 
 在跳转到的页面中点击进入
+
 ![alt text](assets/image-5.png)
 
 进到vscode应用中打开terminal
+
 ![alt text](assets/image-13.png)
 
 运行下面的命令创建文件夹、配置环境
@@ -40,9 +45,11 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 作为简化模型的案例，这里使用的是 [kaggle 房价预测竞赛中的训练数据集](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)。在后面的处理中，我们只使用了数值部分的特征，并把全部数据分为训练集和测试集两部分。
 
 实验所用数据: [train.csv](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial1_regression/data/train.csv)，到网页中点击复制
+
 ![alt text](assets/image-8.png)
 
 在~/tutorial1/data文件夹中新建train.csv，将复制的内容粘贴进去
+
 ![alt text](assets/image-9.png)
 ![alt text](assets/image-7.png)
 ![alt text](assets/image-10.png)
@@ -162,7 +169,9 @@ python tutorial1.py
 
 ## 4、查看结果
 运行代码后会在代码同路径下生成训练效果图
+
 ![alt text](assets/image-11.png)
 
 查看图片，这个训练曲线显示，随着训练轮数的增加，训练集和测试集的损失（Score）都在逐渐下降，且下降速度较快，最后趋于平稳。训练集损失始终低于测试集损失，二者之间有一定间隔，但没有明显发散，说明模型在训练集和测试集上都取得了较好的拟合效果，没有明显的过拟合或欠拟合现象，训练效果较好。
+
 ![alt text](assets/image-12.png)
