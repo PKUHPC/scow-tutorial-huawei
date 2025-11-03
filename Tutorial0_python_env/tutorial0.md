@@ -1,7 +1,7 @@
 # Tutorial0: 在SCOW超算和智算平台配置python环境
 
 * 集群类型：SCOW超算平台、SCOW智算平台
-* 所需镜像：无
+* 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
 * 所需模型：无
 * 所需数据集：无
 * 所需资源：任意资源均可
@@ -54,6 +54,9 @@ conda activate tutorial0
 
 ![alt text](assets/image-15.png)
 
+运行命令`python -c "print('helloworld')"`，能够成功打印
+![alt text](assets/image-16.png)
+
 
 ## 2、SCOW智算平台
 ### 2.1、创建应用
@@ -66,9 +69,9 @@ conda activate tutorial0
 ![alt text](assets/image-3.png)
 ![alt text](assets/image-4.png)
 
-在创建应用中，选择你需要的镜像，包含python环境
+在创建应用中，选择远程镜像，填写教程开头给出的镜像地址
 
-![alt text](assets/image-10.png)
+![alt text](assets/image-17.png)
 
 点击添加算法，选择公共算法->code-server->4.95.3，点击修改默认命令，并填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`
 
@@ -85,8 +88,12 @@ conda activate tutorial0
 ### 2.2、环境验证
 进入应用后，打开终端
 
-![alt text](assets/image-12.png)
+![alt text](assets/image-18.png)
 
 运行命令`python --version`，可以看到python版本，已经具备python环境
 
-![alt text](assets/image-13.png)
+![alt text](assets/image-19.png)
+
+运行命令`python -c "print('helloworld')"`，能够成功打印
+
+![alt text](assets/image-20.png)
