@@ -43,12 +43,12 @@ cd ..
 ```
 
 ## 2、数据准备
-供模型调用的图像存储在教程同路径下的[CLIP.png](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial9_CLIP/CLIP.png)文件中，图像如下：
+供模型调用的图像存储在教程同路径下的[CLIP.png](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial2_classification/CLIP.png)文件中，图像如下：
 ![alt text](assets/image-8.png)
 
 能够看出是CLIP模型的预训练和预测流程图，后面将调用CLIP对本图像进行分类
 
-点击[图像链接](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial9_CLIP/CLIP.png)进入，点击下载
+点击[图像链接](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial2_classification/CLIP.png)进入，点击下载
 ![alt text](assets/image-9.png)
 
 记住图片下载的路径，通过拖动的方式将图片传到tutorial2文件夹下
