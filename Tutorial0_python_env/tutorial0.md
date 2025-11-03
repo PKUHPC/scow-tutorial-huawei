@@ -1,4 +1,4 @@
-# Tutorial0: 在SCOW超算和超算平台配置python环境
+# Tutorial0: 在SCOW超算和智算平台配置python环境
 
 * 集群类型：SCOW超算平台、SCOW智算平台
 * 所需镜像：无
