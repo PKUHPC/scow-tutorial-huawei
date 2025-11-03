@@ -136,7 +136,7 @@ python examples/qwen2vl/llava_instruct_2_mllm_demo_format.py
 ~~~
 
 修改~/MindSpeed-MM/examples/qwen2vl/data_2b.json文件:
-* dataset_param.preprocess_parameters.model_name_or_path：模型路径
+* dataset_param.preprocess_parameters.model_name_or_path：模型路径(也就是`echo $SCOW_AI_MODEL_PATH`命令得到的环境路径，不同集群不同用户的路径可能不同)
 
 ![alt text](./assets/image-12.png)
 
