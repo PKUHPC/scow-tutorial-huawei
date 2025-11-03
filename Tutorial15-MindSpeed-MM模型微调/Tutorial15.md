@@ -126,10 +126,6 @@ echo $WORK_DIR
 
 ![alt text](./assets/image-16.png)
 
-* 模型路径：/data/.shared/official/model/Qwen/Qwen2-VL-2B-Instruct/latest/Qwen2-VL-2B-Instruct
-* 数据集路径：/data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251015-162754/data
-* 工作目录：/data/home/2401213359/scow/ai/appData/ascend-k8s-vscode-20251022-061715
-
 注：每个用户的模型路径与数据集路径可能不同，需根据实际情况决定。
 
 运行下面的命令配置数据集
