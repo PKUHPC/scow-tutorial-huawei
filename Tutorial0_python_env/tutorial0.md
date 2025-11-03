@@ -17,19 +17,19 @@
 
 ![alt text](image-1.png)
 
+会进入以下界面，后续安装conda以及创建环境都在此页面完成
+
+![alt text](image-14.png)
+
 ### 1.2、安装conda
 Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
 ```shell
-# 0. 安装 wget
-sudo apt update
-sudo apt install wget
-
 # 1. 获得最新的miniconda安装包；
 wget https://repo.anaconda.com/miniconda/Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
 
 # 2. 安装
 chmod +x Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
-./Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
+./Miniconda3-py313_25.7.0-2-Linux-aarch64.sh  #最后选项要填yes
 
 # 3. 安装成功后可以删除安装包，节省存储空间
 rm -f Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
@@ -40,8 +40,6 @@ source ~/.bashrc
 # 5. 检查是否安装成功
 conda --version
 
-# 6. 初始化
-conda init bash
 ```
 
 ### 1.3、创建环境
@@ -53,6 +51,8 @@ conda activate tutorial0
 ```
 
 运行命令`python --version`，可以看到python版本，已经具备python环境
+
+![alt text](image-15.png)
 
 
 ## 2、SCOW智算平台
