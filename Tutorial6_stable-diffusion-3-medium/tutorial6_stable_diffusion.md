@@ -63,7 +63,7 @@ conda activate tutorial
 pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 \
 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 \
 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 transformers==4.42.4 datasets==3.2.0 \
-evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 \
+evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 decorator==5.2.1 \
 -i https://mirrors.pku.edu.cn/pypi/web/simple
 
 pip install  huggingface_hub==0.35.3
@@ -77,7 +77,7 @@ pip install  modelscope==1.22.3
 
 ```
 # 通过命令行下载模型和数据
-modelscope download --model stabilityai/stable-diffusion-3-medium-diffusers --local-dir stabilityai/stable-diffusion-3-medium-diffusers
+modelscope download --model stabilityai/stable-diffusion-3-medium-diffusers --local_dir stabilityai/stable-diffusion-3-medium-diffusers
 ```
 
 ## 3. 文生图
@@ -144,3 +144,7 @@ for i in range(10):
 python run.py
 ```
 
+在脚本同路径下会生成十张图片和一个输出结果的json文件，打开其中一张，可以看到生成的图片内容符合我们给到大模型的prompt
+
+![alt text](assets/image-10.png)
+![alt text](assets/image-11.png)
