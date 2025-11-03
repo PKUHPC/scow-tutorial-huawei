@@ -32,7 +32,7 @@ mkdir tutorial3
 cd tutorial3
 conda create -n tutorial3 python==3.10
 conda activate tutorial3
-pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 pandas==2.2.2 torchvision==0.18.1 pyyaml==6.0.2 traitlets==5.14.3 decorator==5.2.1 attrs==25.4.0 psutil==7.1.2
+pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 pandas==2.2.2 torchvision==0.18.1 pyyaml==6.0.2 traitlets==5.14.3 decorator==5.2.1 attrs==25.4.0 psutil==7.1.2 scipy==1.15.3
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ```
 
