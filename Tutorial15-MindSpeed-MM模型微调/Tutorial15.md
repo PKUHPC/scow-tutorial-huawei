@@ -75,8 +75,8 @@ pip3 install torch_npu-2.1.0.post12-cp310-cp310-manylinux_2_17_aarch64.manylinux
 分别运行下面的命令，安装apex for Ascend，可参考https://gitee.com/ascend/apex
 ~~~shell
 git clone -b master https://gitee.com/ascend/apex.git
+cd apex/ && git checkout ac331b5c7ac6e9f1ba0106f090c0eea64dd17d39
 pip install setuptools==65.7.0 wheel==0.45.1
-cd apex/
 bash scripts/build.sh --python=3.10
 cd apex/dist/
 pip3 uninstall apex
