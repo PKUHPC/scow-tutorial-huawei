@@ -37,32 +37,10 @@
 
 ![alt text](assets/image-4.png)
 
-### 1.3 安装conda
-Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
-```
-# 1. 获得最新的miniconda安装包；
-wget https://repo.anaconda.com/miniconda/Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
+### 1.3 安装依赖
 
-# 2. 安装
-chmod +x Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
-./Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
+确保已经根据[tutorial0](../Tutorial0_python_env/tutorial0.md)安装conda环境
 
-# 3. 安装成功后可以删除安装包，节省存储空间
-rm -f Miniconda3-py313_25.7.0-2-Linux-aarch64.sh
-
-# 4. 执行以下命令，即可导入 conda 环境
-source ~/.bashrc
-
-# 5. 检查是否安装成功
-conda --version
-
-# 6. 初始化
-conda init bash
-
-# 7. 退出命令行再重新连接, 让conda生效
-```
-
-### 1.4 安装依赖
 ```
 # 在Shell命令行中执行：
 
