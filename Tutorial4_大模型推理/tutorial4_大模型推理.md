@@ -14,7 +14,7 @@
 
 ## 1、使用超算平台下载模型
 
-根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/Tutorial16_下载模型.md) 下载模型
+根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/tutorial16_下载模型.md) 下载模型
 
 ## 2、使用智算平台管理模型
 2.1 选取智算平台，进入AI集群
