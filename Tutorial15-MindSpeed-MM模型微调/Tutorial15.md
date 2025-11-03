@@ -4,7 +4,7 @@
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-ubuntu22.04-py3.10
 * 所需模型：Qwen/Qwen2-VL-2B-Instruct
 * 所需数据集：COCO2017
-* 所需资源：建议使用1张910B NPU运行本教程。
+* 所需资源：单机单卡
 * 目标：本节以Qwen2-VL-2B-Instruct模型为例，在SCOW-AI集群中创建VScode应用配置MindSpeed-MM框架使用COCO2017数据集对这个QwenVL模型进行微调，并给出微调前后模型推理结果对比
 * 参考文档：https://gitee.com/ascend/MindSpeed-MM/blob/2.0.0/examples/qwen2vl/README.md
 
