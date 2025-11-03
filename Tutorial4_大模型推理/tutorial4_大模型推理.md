@@ -8,13 +8,13 @@
 * 目标：本节旨在使用 [Qwen3-4B] (https://modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507) 模型展示大模型推理。
 
 分以下几步来实现：
-1.在超算集群，通过shell的方式下载模型
-2.在智算集群，添加了下载的模型到 我的模型里面
-3.在智算集群，创建VSCode交互应用，使用下载的大模型进行推理
+1. 在超算集群，通过shell的方式下载模型
+2. 在智算集群，添加了下载的模型到 我的模型里面
+3. 在智算集群，创建VSCode交互应用，使用下载的大模型进行推理
 
 ## 1、使用超算平台下载模型
 
-根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/Tutorial16_下载模型.md) 下载模型
+根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/tutorial16_下载模型.md) 下载模型
 
 ## 2、使用智算平台管理模型
 2.1 选取智算平台，进入AI集群
