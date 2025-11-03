@@ -2,13 +2,13 @@
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
-* 所需模型：Qwen2.5-1.5B-Instruct
+* 所需模型：Qwen2.5-7B-Instruct
 * 所需数据集：教程内提供
 * 所需资源：单节点单卡，建议使用1张910B NPU运行本教程。
-* 目标：本节以Qwen2.5-1.5B-Instruct模型为例，使用LLaMA-Factory交互应用对这个Qwen大模型完成微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
+* 目标：本节以Qwen2.5-7B-Instruct模型为例，使用LLaMA-Factory交互应用对这个Qwen大模型完成微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 分以下几步来实现：
-1. 创建LLaMA-Factory交互应用，选取Qwen2.5-1.5B-Instruct模型
+1. 创建LLaMA-Factory交互应用，选取Qwen2.5-7B-Instruct模型
 2. 按照步骤，使用LLaMA-Factory交互应用完成对大模型的微调和推理
 
 ## 1、拉取镜像并安装
@@ -33,7 +33,7 @@
 
 1.3.2 添加模型和算法
 
-* 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-1.5B-Instruct(official) 模型，版本下拉菜单中，选取 latest(如果您使用的集群没有该模型，请参考[Tutorial16](../Tutorial16_下载模型/tutorial16_下载模型.md)下载模型，其中tutorial16中的1.1.6步骤使用`modelscope download --model Qwen/Qwen2.5-1.5B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-1.5B-Instruct`)
+* 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-7B-Instruct(official) 模型，版本下拉菜单中，选取 latest(如果您使用的集群没有该模型，请参考[Tutorial16](../Tutorial16_下载模型/tutorial16_下载模型.md)下载模型，其中tutorial16中的1.1.6步骤使用`modelscope download --model Qwen/Qwen2.5-7B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-7B-Instruct`)
 ![alt text](assets/image-73.png)
 
 * 勾选添加类型 - 数据集，下拉菜单中，选取 我的数据集；数据集下拉菜单中，选取刚创建的 identity（这里有你的用户名） 数据集，版本下拉菜单中，选取刚在数据集中设置的版本号；有多个版本的话，选取恰当的版本
@@ -66,7 +66,7 @@
 模型加载中，这里加载的模型是前面步骤中选取的模型 Qwen2.5-7B-Instruct
 ![alt text](assets/image-81.png)
 
-2.1.2 模型加载后，可以跟模型进行对话聊天，这里使用推理的模型是 Qwen2.5-1.5B-Instruct 也就是在创建交互应用时选择的模型
+2.1.2 模型加载后，可以跟模型进行对话聊天，这里使用推理的模型是 Qwen2.5-7B-Instruct 也就是在创建交互应用时选择的模型
 ![alt text](assets/image-82.png)
 
 
