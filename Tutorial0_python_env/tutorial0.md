@@ -11,15 +11,15 @@
 ### 1.1、打开shell
 首先进入超算平台
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
 点击Shell->login01进入shell
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 会进入以下界面，后续安装conda以及创建环境都在此页面完成
 
-![alt text](image-14.png)
+![alt text](assets/image-14.png)
 
 ### 1.2、安装conda
 Conda 是一个开源的包管理和环境管理系统。它用于安装和管理软件包及其依赖项，同时允许用户创建独立的环境，以便在一个系统上运行多个项目。在命令行终端中运行如下命令以安装 conda：
@@ -52,41 +52,41 @@ conda activate tutorial0
 
 运行命令`python --version`，可以看到python版本，已经具备python环境
 
-![alt text](image-15.png)
+![alt text](assets/image-15.png)
 
 
 ## 2、SCOW智算平台
 ### 2.1、创建应用
 首先进入智算平台
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 点击作业->应用，选择vscode应用
 
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](assets/image-3.png)
+![alt text](assets/image-4.png)
 
 在创建应用中，选择你需要的镜像，包含python环境
 
-![alt text](image-10.png)
+![alt text](assets/image-10.png)
 
 点击添加算法，选择公共算法->code-server->4.95.3，点击修改默认命令，并填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`
 
-![alt text](image-6.png)
+![alt text](assets/image-6.png)
 
 按需填写单节点加速卡卡数以及最长运行时间，本教程仅为示例因此保留默认值，最后点击提交
 
-![alt text](image-7.png)
+![alt text](assets/image-7.png)
 
 在跳转的页面中点击进入即可进入应用
 
-![alt text](image-11.png)
+![alt text](assets/image-11.png)
 
 ### 2.2、环境验证
 进入应用后，打开终端
 
-![alt text](image-12.png)
+![alt text](assets/image-12.png)
 
 运行命令`python --version`，可以看到python版本，已经具备python环境
 
-![alt text](image-13.png)
+![alt text](assets/image-13.png)
