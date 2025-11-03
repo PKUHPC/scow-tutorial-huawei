@@ -62,7 +62,7 @@ conda activate tutorial
 pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas==2.2.2 \
 scikit-learn==1.5.0 pyyaml==6.0.2 torchvision==0.18.1 torchaudio==2.3.1 accelerate==1.2.1 \
 scipy==1.13.1 attrs==24.3.0 deepspeed==0.16.2 transformers==4.42.4 datasets==3.2.0 \
-evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 \
+evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 decorator==5.2.1 \
 -i https://mirrors.pku.edu.cn/pypi/web/simple
 
 pip install  huggingface_hub==0.35.3
@@ -73,7 +73,8 @@ pip install  modelscope==1.22.3
 ## 2. 下载模型和数据
 ```
 # 通过命令行下载模型和数据
-modelscope download --model google-bert/bert-base-uncased --local-dir ./bert-base-uncased
+export HF_ENDPOINT=https://hf-mirror.com
+modelscope download --model google-bert/bert-base-uncased --local_dir ./bert-base-uncased
 ```
 
 ## 3. 运行模型微调
@@ -215,3 +216,8 @@ model.save_pretrained('model_trained')
 ```
 python run.py
 ```
+
+日志可以看到训练结果，同路径下可以看到训练后的模型输出
+
+![alt text](assets/image-9.png)
+![alt text](assets/image-10.png)
