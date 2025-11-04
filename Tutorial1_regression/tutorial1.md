@@ -1,15 +1,15 @@
-# Tutorial1: 房价预测
+# Tutorial1: 房价预测-回归类问题
 
 * 集群类型：超算平台
 * 所需镜像：无
 * 所需模型：无
 * 所需数据集：教程内提供
-* 所需资源：建议使用1张910B NPU运行本教程。
+* 所需资源：单机单卡，建议使用1张910B NPU运行本教程。
 * 目标：本节旨在通过 [kaggle 房价预测竞赛](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) 这一简单案例展示如何使用全连接神经网络解决回归问题。
 
-此教程运行在SCOW超算平台中，请确保运行过tutorial0中安装conda的步骤，再来尝试运行本教程
+此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
 
-## 1、环境准备
+## 1. 环境准备
 切换到超算平台中
 
 ![alt text](assets/image.png)
@@ -41,7 +41,7 @@ pip install torch==2.3.1 torch-npu==2.3.1 numpy==1.26.4 matplotlib==3.8.4 pandas
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ```
 
-## 2、数据集下载
+## 2. 数据集下载
 作为简化模型的案例，这里使用的是 [kaggle 房价预测竞赛中的训练数据集](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)。在后面的处理中，我们只使用了数值部分的特征，并把全部数据分为训练集和测试集两部分。
 
 实验所用数据: [train.csv](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial1_regression/data/train.csv)，到网页中点击复制
@@ -54,7 +54,7 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ![alt text](assets/image-7.png)
 ![alt text](assets/image-10.png)
 
-## 3、运行训练
+## 3. 运行训练
 在tutorial1下创建Python脚本
 ```shell
 echo "" > tutorial1.py
@@ -71,7 +71,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 from matplotlib import pyplot as plt
 
-# 1. 数据处理模块
+# 3.1 数据处理模块
 def data_preprocess(file_path, test_size=0.2, random_state=42):
     data = pd.read_csv(file_path)
     data = data.iloc[:, 1:]  # 去掉第一列编号
@@ -91,7 +91,7 @@ def data_preprocess(file_path, test_size=0.2, random_state=42):
     y_test = torch.tensor(y_test.reshape(-1, 1), dtype=torch.float32)
     return X_train, X_test, y_train, y_test
 
-# 2. 模型训练模块
+# 3.2 模型训练模块
 class Net(nn.Module):
     def __init__(self, input_features):
         super(Net, self).__init__()
@@ -132,7 +132,7 @@ def train_model(X_train, X_test, y_train, y_test,
             test_ls.append(score(model, X_test.to(device), y_test.to(device), criterion))
     return model, train_ls, test_ls
 
-# 3. 可视化模块
+# 3.3 可视化模块
 def plot_learning_curve(train_ls, test_ls, epochs, save_path='learning_curve.png'):
     plt.rcParams['figure.figsize'] = (4, 3)
     plt.plot(list(range(1, epochs + 1)), train_ls, 'b', label='train')
@@ -147,7 +147,7 @@ def plot_learning_curve(train_ls, test_ls, epochs, save_path='learning_curve.png
     plt.savefig(save_path)
     plt.close()  # 推荐加上，防止内存泄漏
 
-# 4. main函数
+# 3.4 main函数
 def main():
     # 数据路径
     file_path = './data/train.csv'
@@ -167,7 +167,7 @@ if __name__ == '__main__':
 python tutorial1.py
 ```
 
-## 4、查看结果
+## 4. 查看结果
 运行代码后会在代码同路径下生成训练效果图
 
 ![alt text](assets/image-11.png)
