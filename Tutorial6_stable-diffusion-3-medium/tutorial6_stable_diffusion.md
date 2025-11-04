@@ -4,7 +4,7 @@
 * 所需镜像：无
 * 所需模型：教程内下载（stable-diffusion-3-medium-diffusers）
 * 所需数据集：教程内提供
-* 所需硬件资源：建议使用1张910B NPU运行本教程。
+* 所需硬件资源：单机单卡，建议使用1张910B NPU运行本教程。
 * 目标：本节旨在展示使用 stable-diffusion-3-medium-diffusers 模型进行文生图任务。
 
 分以下几步来实现：
