@@ -15,7 +15,7 @@
 
 1.1 准备数据集
 
-根据[Tutorial17_添加和管理数据集](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
+根据[Tutorial17_添加和管理数据集](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
 
 1.2 创建交互式应用
 
