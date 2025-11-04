@@ -3,10 +3,24 @@
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-ubuntu22.04-py3.10
 * 所需模型：Qwen/Qwen2-VL-2B-Instruct
-* 所需数据集：COCO2017
+* 所需数据集：教程内提供
 * 所需资源：单机单卡
 * 目标：本节以Qwen2-VL-2B-Instruct模型为例，在SCOW-AI集群中创建VScode应用配置MindSpeed-MM框架使用COCO2017数据集对这个QwenVL模型进行微调，并给出微调前后模型推理结果对比
 * 参考文档：https://gitee.com/ascend/MindSpeed-MM/blob/2.0.0/examples/qwen2vl/README.md
+
+## 0、准备数据集
+
+如果您所使用的集群没有COCO2017这一数据集，您需要自行下载数据集并上传到集群（建议在超算集群中使用shell或创建应用进行下载）
+
+需要下载两个部分的数据：
+* COCO2017数据集[COCO2017](https://cocodataset.org/#download)，并解压到目标目录下的./data/COCO2017文件夹中
+* 获取图片数据集的描述文件（[LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main)），下载至./data/路径下
+
+得到的目录结构如下：
+
+![alt text](./assets/image-29.png)
+
+最后参考教程[Tutorial17](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md)在集群中创建COCO2017数据集
 
 ## 1、启动VScode应用
 根据文档的配套环境版本，我们选择CANN版本为8.1.RC1、Python版本为3.10的镜像，镜像链接在开头已经给出
@@ -16,13 +30,13 @@
 进入SCOW-AI集群后点击作业->应用进入创建应用页面，选择创建vscode
 
 ![alt text](./assets/image-1.png)
-![alt text](image.png)
+![alt text](./assets/image-28.png)
 
 选择远程镜像，填入给出的镜像链接
 
 ![alt text](./assets/image-7.png)
 
-添加算法、数据集、模型，算法选择`code-server`，数据集选择`COCO2017`，模型选择`Qwen/Qwen2-VL-2B-Instruct`。并且在运行命令中填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`，以确保在启动应用时运行code-server算法
+添加算法、数据集、模型，算法选择`code-server`，数据集选择`COCO2017`，模型选择`Qwen/Qwen2-VL-2B-Instruct`(如果您使用的集群没有该模型，请参考Tutorial16下载模型，其中tutorial16中的1.1.6步骤使用modelscope download --model Qwen/Qwen2-VL-2B-Instruct --local_dir ./Qwen/Qwen/Qwen2-VL-2B-Instruct)。并且在运行命令中填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`，以确保在启动应用时运行code-server算法
 
 ![alt text](./assets/image-3.png)
 
