@@ -1,11 +1,11 @@
-# Tutorial0: 在SCOW超算和智算平台配置python环境
+# Tutorial0: 在SCOW超算和智算平台配置Python环境
 
-* 集群类型：SCOW超算平台、SCOW智算平台
+* 集群类型：超算平台和智算平台
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
 * 所需模型：无
 * 所需数据集：无
-* 所需资源：任意资源均可
-* 目标：本节旨在向用户演示如何分别在SCOW各平台配置python环境，这是后续教程的基础环境，具体来说在SCOW超算平台中，我们安装miniconda以创建隔离的python环境；在SCOW智算平台中，我们提供的基础镜像一般已经包含python环境，只需验证python环境即可
+* 所需资源：根据需求申请单机单卡，或单机多卡，或多机多卡
+* 目标：本节旨在向用户演示如何分别在SCOW各平台配置Python环境，这是后续教程的基础环境，具体来说在SCOW超算平台中，我们安装miniconda以创建隔离的Python环境；在SCOW智算平台中，我们提供的基础镜像一般已经包含Python环境，只需验证Python环境即可
 
 ## 1、SCOW超算平台
 ### 1.1、打开shell
