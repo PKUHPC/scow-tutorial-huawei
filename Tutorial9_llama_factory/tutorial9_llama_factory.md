@@ -1,4 +1,5 @@
-# Tutorial7: 使用LLaMA-Factory官方镜像完成Qwen2.5大模型的微调、推理
+# Tutorial9
+: 使用LLaMA-Factory官方镜像完成Qwen2.5大模型的微调、推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
@@ -15,7 +16,7 @@
 
 1.1 准备数据集
 
-根据[Tutorial17_添加和管理数据集](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
+根据[Tutorial5_添加和管理数据集](../Tutorial5_添加和管理数据集/tutorial5_添加和管理数据集.md) 准备数据集
 
 1.2 创建交互式应用
 

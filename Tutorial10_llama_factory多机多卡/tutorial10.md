@@ -1,4 +1,4 @@
-# Tutorial8: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡微调、推理
+# Tutorial10: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡微调、推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
@@ -11,7 +11,7 @@
 
 1.1 准备数据集
 
-根据[Tutorial17_添加和管理数据集](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
+根据[Tutorial5_添加和管理数据集](../Tutorial5_添加和管理数据集/tutorial5_添加和管理数据集.md) 准备数据集
 
 这里简单介绍数据集，部分数据如下所示，目的是希望微调后的模型自我认同为北京大学开发的AI助手，可与最终的推理验证进行对照
 

@@ -1,4 +1,4 @@
-# Tutorial6: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片
+# Tutorial8: stable-diffusion-3-medium 文生图任务，通过 prompt 提示生成对应的图片
 
 * 集群类型：超算集群
 * 所需镜像：无
