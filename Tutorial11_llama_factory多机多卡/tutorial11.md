@@ -1,4 +1,4 @@
-# Tutorial10: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡微调、推理
+# Tutorial11: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡微调、推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2

@@ -1,4 +1,4 @@
-# Tutorial12: 使用LLaMa-Factory交互应用做大模型微调
+# Tutorial10: 使用LLaMa-Factory交互应用做大模型微调
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
