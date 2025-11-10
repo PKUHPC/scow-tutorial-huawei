@@ -1,4 +1,4 @@
-# Tutorial4: 大模型推理
+# Tutorial6: 大模型推理
 
 * 集群类型：超算平台和智算平台
 * 所需镜像：app-store-images.pku.edu.cn/ascend/cann:8.1.rc1-910b-openeuler22.03-py3.10
@@ -14,7 +14,7 @@
 
 ## 1、使用超算平台下载模型
 
-根据[Tutorial16_下载模型](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial16_下载模型/tutorial16_下载模型.md) 下载模型
+根据[Tutorial4_下载模型](../Tutorial4_下载模型/tutorial4_下载模型.md) 下载模型
 
 ## 2、使用智算平台管理模型
 2.1 选取智算平台，进入AI集群
