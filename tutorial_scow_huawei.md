@@ -23,8 +23,8 @@
  
 
 ### 大模型相关
-  - **[Tutorial16 下载模型](Tutorial16_下载模型/tutorial16_下载模型.md)**: 在超算平台，展示如何下载大模型的过程。
-  - **[Tutorial17 添加和管理数据集](Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md)**: 在智算平台，展示如何添加和管理数据集的过程。
+  - **[Tutorial4 下载模型](Tutorial4_下载模型/tutorial4_下载模型.md)**: 在超算平台，展示如何下载大模型的过程。
+  - **[Tutorial5 添加和管理数据集](Tutorial5_添加和管理数据集/tutorial5_添加和管理数据集.md)**: 在智算平台，展示如何添加和管理数据集的过程。
   - **[Tutorial4 大模型推理-单机单卡](Tutorial4_大模型推理/tutorial4_大模型推理.md)**: 在智算平台，通过使用Qwen3-4B模型展示大模型如何根据提示词进行推理。
   - **[Tutorial5 大模型微调-单机单卡](Tutorial5_Bert模型微调/tutorial5_Bert模型微调.md)**: 在超算平台，通过使用谷歌Google的bert-base-uncased模型展示Bert模型微调的过程。
   - **[Tutorial6 大模型文生图任务-单机单卡](Tutorial6_stable-diffusion-3-medium/tutorial6_stable_diffusion.md)**: 在超算平台，使用stable-diffusion-3-medium 模型，通过 prompt 提示词生成对应的图片的过程。
