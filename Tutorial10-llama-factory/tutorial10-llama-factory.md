@@ -15,7 +15,7 @@
 
 1.1 准备数据集
 
-根据[Tutorial17_添加和管理数据集](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md) 准备数据集
+根据[Tutorial5_添加和管理数据集](../Tutorial5_添加和管理数据集/tutorial5_添加和管理数据集.md) 准备数据集
 
 1.2 创建交互式应用
 1.2.1 然后点击 作业 > 选择集群（这里ascend-k8s是AI集群的名称） > 应用 > 创建应用
@@ -33,7 +33,7 @@
 
 1.3.2 添加模型和算法
 
-* 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-7B-Instruct(official) 模型，版本下拉菜单中，选取 latest(如果您使用的集群没有该模型，请参考[Tutorial16](../Tutorial16_下载模型/tutorial16_下载模型.md)下载模型，其中tutorial16中的1.1.6步骤使用`modelscope download --model Qwen/Qwen2.5-7B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-7B-Instruct`)
+* 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-7B-Instruct(official) 模型，版本下拉菜单中，选取 latest(如果您使用的集群没有该模型，请参考[Tutorial4](../Tutorial4_下载模型/tutorial4_下载模型.md)下载模型，其中tutorial4中的1.1.6步骤使用`modelscope download --model Qwen/Qwen2.5-7B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-7B-Instruct`)
 ![alt text](assets/image-73.png)
 
 * 勾选添加类型 - 数据集，下拉菜单中，选取 我的数据集；数据集下拉菜单中，选取刚创建的 identity（这里有你的用户名） 数据集，版本下拉菜单中，选取刚在数据集中设置的版本号；有多个版本的话，选取恰当的版本

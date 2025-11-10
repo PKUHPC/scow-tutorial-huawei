@@ -18,7 +18,7 @@
 进入创建好的文件夹中，点击新文件，填写文件名`identity-pku-assistant.json`。
 ![alt text](assets/image-5.png)
 
-直接点击创建好的文件进入编辑界面，点击编辑，把[数据集内容](https://app-store-images.pku.edu.cn/pku-app-store-storage/dataset/identity-pku-assistant.json)粘贴到文本框，点击保存。
+直接点击创建好的文件进入编辑界面，点击编辑，把[数据集内容](dataset/identity-pku-assistant.json)粘贴到文本框，点击保存。
 ![alt text](assets/image-6.png)
 ![alt text](assets/image-7.png)
 ![alt text](assets/image-8.png)
