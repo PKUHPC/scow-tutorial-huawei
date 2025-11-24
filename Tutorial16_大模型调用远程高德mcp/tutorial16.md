@@ -15,30 +15,30 @@
 
 本教程需要调用anthropic和openai的api。
 
-假设你获取到的apikey为 `abcdefg1234567`，anthropic和openai的url和apikey格式如下：
+anthropic和openai的url和apikey示例如下：
 ```
 # anthropic
 anthropic_url = "https://大模型api地址"
-anthropic_key = "abcdefg1234567"
+anthropic_key = "antabcdefg1234567"
 
 # openai
 openai_url = "https://大模型api地址/v1"
-openai_key = "abcdefg1234567"
+openai_key = "openaiabcdefg1234567"
 ```
 
 ### 0.2、获取高德开放平台的Key
 
 申请方法可参考官方文档 `https://lbs.amap.com/api/mcp-server/summary`，最终获取高德开放平台的Key
 
-假设你获取到的key为 `1234567abcdefg`，接口的url和key的格式如下：
+假设你获取到的接口url和key的格式如下：
 ```
 mcp_url = "https://mcp.amap.com/sse"
-mcp_key = "1234567abcdefg"
+mcp_key = "amap1234567abcdefg"
 ```
 
 完整的mcpserver url如下
 ```
-sse_url = "https://mcp.amap.com/sse?key=1234567abcdefg"
+sse_url = "https://mcp.amap.com/sse?key=amap1234567abcdefg"
 ```
 
 ## 1、启动应用配置环境
@@ -78,7 +78,7 @@ pip install anthropic==0.74.1 fastmcp==2.13.1 openai==2.8.1
 
 ![alt text](assets/image-5.png)
 
-将下面的代码粘贴到文件中，注意根据实际情况修改"大模型api地址"
+将下面的代码粘贴到文件中，注意根据实际情况，把"antabcdefg1234567"修改为你自己的anthropic api key，"amap1234567abcdefg"修改为你自己的高德开放平台Key，"大模型api地址"修改为真实大模型api地址
 ```python
 import asyncio
 from fastmcp import Client
@@ -168,9 +168,9 @@ class ClaudeToolClient:
 # 示例用法
 async def main():
     mcp_url = "https://mcp.amap.com/sse"
-    mcp_key = ""
+    mcp_key = "amap1234567abcdefg"
     anthropic_url = "https://大模型api地址"
-    anthropic_key = ""
+    anthropic_key = "antabcdefg1234567"
 
     client = ClaudeToolClient(mcp_url, mcp_key, anthropic_url, anthropic_key)
     question = "北京大学新燕园校区的经纬度是多少？"
@@ -181,8 +181,6 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-
-将 `main函数` 中的 `mcp_key` 和 `anthropic_key` 补充上你在章节0中申请到的apikey
 
 运行以下命令运行程序
 ```shell
@@ -199,7 +197,7 @@ python anthropic_mcp.py
 
 ![alt text](assets/image-6.png)
 
-将下面的代码粘贴到文件中
+将下面的代码粘贴到文件中，注意根据实际情况，把"openaiabcdefg1234567"修改为你自己的openai api key，"amap1234567abcdefg"修改为你自己的高德开放平台Key，"大模型api地址"修改为真实大模型api地址
 ```python
 import asyncio
 from fastmcp import Client
@@ -290,9 +288,9 @@ class OpenAIToolClient:
 # 示例用法
 async def main():
     mcp_url = "https://mcp.amap.com/sse"
-    mcp_key = ""
+    mcp_key = "amap1234567abcdefg"
     openai_url = "https://大模型api地址/v1"  # 如果用官方不用填
-    openai_key = ""
+    openai_key = "openaiabcdefg1234567"
 
     client = OpenAIToolClient(mcp_url, mcp_key, openai_url, openai_key)
     question = "北京大学新燕园校区的经纬度是多少？"
@@ -302,8 +300,6 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-
-将 `main函数` 中的 `mcp_key` 和 `openai_key` 补充上你在章节0中申请到的apikey
 
 运行以下命令运行程序
 ```shell
