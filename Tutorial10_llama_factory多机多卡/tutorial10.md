@@ -86,7 +86,7 @@ resume_from_checkpoint: null
 
 # 配置文件中的TensorBoard设置
 logging_dir: ./logs/tensorboard
-# report_to: tensorboard" > /app/config.yaml && echo "{\"identity\":{\"file_name\":\"${SCOW_AI_DATASET_PATH}/identity-pku-assistant.json\"}}" > /app/data/dataset_info.json
+# report_to: tensorboard" > /app/config.yaml && echo "{\"identity\":{\"file_name\":\"${SCOW_AI_DATASET_PATH}/identity.json\"}}" > /app/data/dataset_info.json
 ```
 
 开始微调（两条命令请同时运行，间隔不要超过30s）：
