@@ -20,7 +20,7 @@
 
 ![alt text](./assets/image-29.png)
 
-最后参考教程[Tutorial17](../Tutorial17_添加和管理数据集/tutorial17_添加和管理数据集.md)在集群中创建COCO2017数据集
+最后参考教程[Tutorial5](../Tutorial5_添加和管理数据集/tutorial5_添加和管理数据集.md)在集群中创建COCO2017数据集
 
 ## 1、启动VScode应用
 根据文档的配套环境版本，我们选择CANN版本为8.1.RC1、Python版本为3.10的镜像，镜像链接在开头已经给出
