@@ -84,17 +84,17 @@
 
 3.1.7 打开以自己用户名为名字的文件夹，之后的所有文件都将保存在这个文件夹下，之后的所有操作都将在这个文件夹下进行
 点选左侧导航栏中第二个选项，显示 打开文件夹 按钮
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder-icon.png)
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder.png)
+![alt text](assets/1.1.8-open-folder-icon.png)
+![alt text](assets/1.1.8-open-folder.png)
 
 点击 打开文件夹 按钮，可见 最初的文件夹是 /root/
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder-root.png)
+![alt text](assets/1.1.8-open-folder-root.png)
 
 将输入框内的文件夹修改为 /data/home/你的用户名，点击 OK 按钮
 
 点选左侧导航栏中第一个选项，选择 Termianl > New Terminal 创建新终端
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-terminal-icon.png)
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-create-terminal.png)
+![alt text](assets/1.1.8-terminal-icon.png)
+![alt text](assets/1.1.8-create-terminal.png)
 
 完整的VSCode应用包含的左侧文件夹、右侧上半区域的文件显示窗口、和右侧下半区域的终端
 
@@ -189,3 +189,8 @@ print("content:", content)
 
 3.4.2 提示词在 tutorial4.py 中，任务是要大模型：简短介绍什么是大模型。大模型推理的内容如下图所示，完成了推理任务。
 ![alt text](assets/image-33.png)
+
+---
+> 作者：孔德硕；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn

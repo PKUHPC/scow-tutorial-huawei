@@ -108,3 +108,8 @@ export_legacy_format: false
 
 在聊天框进行对话，可以发现模型回答达到预期效果
 ![alt text](assets/image-27.png)
+
+---
+> 作者：褚苙扬；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn

@@ -112,3 +112,8 @@ python tutorial2.py
 可以看到a diagram对应的百分比最高，可知该图像最符合diagram的描述，与事实相符。
 
 ![alt text](assets/image-13.png)
+
+---
+> 作者：褚苙扬；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn

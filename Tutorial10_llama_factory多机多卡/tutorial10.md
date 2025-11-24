@@ -159,3 +159,8 @@ llamafactory-cli export /app/lora_merge.yaml
 在对话框中提问`你是谁`，模型回答`您好，我是由 北京大学 发明的 北大助手。我可以为您提供多种多样的服务，比如翻译、写代码、闲聊、为您答疑解惑等。`，达到微调效果
 
 ![alt text](assets/image-22.png)
+
+---
+> 作者：褚苙扬；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn

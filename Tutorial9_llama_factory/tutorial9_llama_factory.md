@@ -60,31 +60,31 @@
 ![alt text](assets/image-9.png)
 
 如果你是首次走到这一步，会看见如下弹窗，勾选 信任作者，并点击 信任作者 按钮
-![alt text](../tutorial_scow_for_ai.assets/1.1.7-trust-author-popup.png)
+![alt text](assets/1.1.7-trust-author-popup.png)
 
 进入新创建的VScode交互应用的浏览器界面
 ![alt text](assets/image-10.png)
 
 1.2.7 打开app文件夹，之后的所有文件都将保存在这个文件夹下，之后的所有操作都将在这个文件夹下进行
 点选左侧导航栏中第二个选项，显示 打开文件夹 按钮
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder-icon.png)
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder.png)
+![alt text](assets/1.1.8-open-folder-icon.png)
+![alt text](assets/1.1.8-open-folder.png)
 
 点击 打开文件夹 按钮，可见 最初的文件夹是 /root/
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder-root.png)
+![alt text](assets/1.1.8-open-folder-root.png)
 
 将输入框内的文件夹修改为 /app/，点击 OK 按钮
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-open-folder-app.png)
+![alt text](assets/1.1.8-open-folder-app.png)
 
 app文件夹打开，里面包含子文件夹和文件
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-app-folder.png)
+![alt text](assets/1.1.8-app-folder.png)
 
 点选左侧导航栏中第一个选项，选择 Termianl > New Terminal 创建新终端
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-terminal-icon.png)
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-create-terminal.png)
+![alt text](assets/1.1.8-terminal-icon.png)
+![alt text](assets/1.1.8-create-terminal.png)
 
 完整的VSCode应用包含的左侧app文件夹、右侧上半区域的文件显示窗口、和右侧下半区域的终端
-![alt text](../tutorial_scow_for_ai.assets/1.1.8-HW-vscode-check-app-folder.png)
+![alt text](assets/1.1.8-HW-vscode-check-app-folder.png)
 
 ## 2、进行配置
 
@@ -119,10 +119,10 @@ logging_dir: ./logs/tensorboard
 
 2.2 在app文件夹中创建 step1_model_reasoning.py 文件，这是作为模型微调前做推理的文件
 2.2.1 点击红色箭头所指的图标，新建文件，在蓝色方框内给新建的文件取名 step1_model_reasoning.py 再按回车键
-![alt text](../tutorial_scow_for_ai.assets/2.2.1-create-step1-py.png)
+![alt text](assets/2.2.1-create-step1-py.png)
 
 2.2.2 右侧上半部的窗口打开了这个新建的 step1_model_reasoning.py 空白文件
-![alt text](../tutorial_scow_for_ai.assets/2.2.2-blank-step1-py.png)
+![alt text](assets/2.2.2-blank-step1-py.png)
 
 2.2.3 拷贝下面代码:
 ```python
@@ -131,7 +131,7 @@ import torch_npu
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-model_dir = （'./models/Qwen2-1.5B-Instruct')
+model_dir =  './models/Qwen2-1.5B-Instruct'
 print(f"Model downloaded to: {model_dir}")
 
 
@@ -160,15 +160,15 @@ print("\ngenerated_text:", generated_text)
 ```
 
 2.2.4 粘贴到已经打开的空白的 step1_model_reasoning.py 文件，这样就完成了文件创建
-![alt text](../tutorial_scow_for_ai.assets/2.2.4-HW-check-step1-py.png)
+![alt text](assets/2.2.4-HW-check-step1-py.png)
 
 2.3 在app文件夹中创建 step2_refined_model_reasoning.py 文件，这是作为模型微调后做推理的文件
 
 2.3.1 击红色箭头所指的图标，新建文件，在蓝色方框内给新建的文件取名 step2_refined_model_reasoning.py 再按回车键
-![alt text](../tutorial_scow_for_ai.assets/2.3.1-create-step2-py.png)
+![alt text](assets/2.3.1-create-step2-py.png)
 
 2.3.2 右侧上半部的窗口打开了这个新建的 step2_refined_model_reasoning.py 空白文件
-![alt text](../tutorial_scow_for_ai.assets/2.3.2-blank-step2-py.png)
+![alt text](assets/2.3.2-blank-step2-py.png)
 
 2.3.3 拷贝下面代码:
 ```python
@@ -207,7 +207,7 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 ```
 
 2.3.4 粘贴到已经打开的空白的 step2_refined_model_reasoning.py 文件，这样就完成了文件创建
-![alt text](../tutorial_scow_for_ai.assets/2.3.4-HW-check-step2-py.png)
+![alt text](assets/2.3.4-HW-check-step2-py.png)
 
 ## 3、用镜像对模型进行推理、微调
 
@@ -248,3 +248,8 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 
 可以看到使用的是 经过微调后的模型时，大模型认为自己是 北大助手
 ![alt text](assets/image-24.png)
+
+---
+> 作者：孔德硕；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn

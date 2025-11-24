@@ -97,3 +97,8 @@ conda activate tutorial0
 运行命令`python -c "print('helloworld')"`，能够成功打印
 
 ![alt text](assets/image-20.png)
+
+---
+> 作者：褚苙扬；龙汀汀
+>
+> 联系方式：l.tingting@pku.edu.cn
