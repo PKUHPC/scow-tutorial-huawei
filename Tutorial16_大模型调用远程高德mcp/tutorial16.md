@@ -26,8 +26,6 @@ openai_url = "https://大模型api地址/v1"
 openai_key = "abcdefg1234567"
 ```
 
-url已经集成到后续代码中，后续不会用到，因此这里只作介绍，但apikey在后续仍需使用，需要记住
-
 ### 0.2、获取高德mcp的调用资格
 
 申请方法可参考官方文档 `https://lbs.amap.com/api/mcp-server/summary`
