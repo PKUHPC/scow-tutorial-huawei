@@ -1,5 +1,4 @@
-# Tutorial9
-: 使用LLaMA-Factory官方镜像完成Qwen2.5大模型的微调、推理
+# Tutorial9: 使用LLaMA-Factory官方镜像完成Qwen2.5大模型的微调、推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
@@ -131,15 +130,10 @@ import torch_npu
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-<<<<<<< HEAD
 # model_dir = './models/Qwen2-1.5B-Instruct'
 # os.environ.get('SCOW_AI_MODEL_PATH')
 for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH', './models/Qwen2-1.5B-Instruct')]:
     print(f"Model downloaded to: {model_dir}")
-=======
-model_dir =  './models/Qwen2-1.5B-Instruct'
-print(f"Model downloaded to: {model_dir}")
->>>>>>> 61df38c7d09fcb479312e0cf90004d53ad18eb0c
 
     # 设置NPU设备
     device = 'npu:0'
@@ -166,11 +160,7 @@ print(f"Model downloaded to: {model_dir}")
 ```
 
 2.2.4 粘贴到已经打开的空白的 step1_model_reasoning.py 文件，这样就完成了文件创建
-<<<<<<< HEAD
 ![alt text](assets/image-45.png)
-=======
-![alt text](assets/2.2.4-HW-check-step1-py.png)
->>>>>>> 61df38c7d09fcb479312e0cf90004d53ad18eb0c
 
 2.3 在app文件夹中创建 step2_refined_model_reasoning.py 文件，这是作为模型微调后做推理的文件
 
@@ -217,13 +207,7 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 ```
 
 2.3.4 粘贴到已经打开的空白的 step2_refined_model_reasoning.py 文件，这样就完成了文件创建
-<<<<<<< HEAD
-![alt text](../tutorial_scow_for_ai.assets/2.3.4-HW-check-step2-py.png)
 ![alt text](assets/image-46.png)
-=======
-![alt text](assets/2.3.4-HW-check-step2-py.png)
-
->>>>>>> 61df38c7d09fcb479312e0cf90004d53ad18eb0c
 ## 3、用镜像对模型进行推理、微调
 
 3.1 使用还没有经过微调的模型进行推理
@@ -240,9 +224,13 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 3.2 对模型进行微调
 
 3.2.1 安装两个工具，这是为了llama factory的官方镜像可以正常使用
-* torch 在右侧下半部的终端terminal中，粘贴命令 pip3 install torch-npu==2.6.0 再按回车键，确保成功安装
+* torch 
+
+在右侧下半部的终端terminal中，粘贴命令 pip3 install torch-npu==2.6.0 再按回车键，确保成功安装
 ![alt text](assets/image-17.png)
-* torchvision 在右侧下半部的终端terminal中，粘贴命令 pip3 install torchvision==0.21.0 再按回车键，确保成功安装
+* torchvision 
+
+在右侧下半部的终端terminal中，粘贴命令 pip3 install torchvision==0.21.0 再按回车键，确保成功安装
 ![alt text](assets/image-18.png)
 
 3.2.2 在右侧下半部的终端terminal中，粘贴命令 llamafactory-cli train ./config.yaml 再按回车键
