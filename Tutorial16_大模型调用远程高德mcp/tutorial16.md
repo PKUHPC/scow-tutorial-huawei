@@ -5,7 +5,7 @@
 * 所需模型：无
 * 所需数据集：无
 * 所需资源：单机单CPU
-* 目标：本节旨在通过给出几个不同发布方（openai、anthropic）大模型调用远程高德mcp来查询给定地点的经纬度，从而展示大模型与mcp server交互的方法
+* 目标：本节基于几个不同发布方（openai、anthropic）的大模型，调用远程高德mcp来查询给定地点的经纬度，从而展示大模型与mcp server交互的方法
 
 此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](../Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
 
