@@ -26,11 +26,11 @@ openai_url = "https://大模型api地址/v1"
 openai_key = "abcdefg1234567"
 ```
 
-### 0.2、获取高德mcp的调用资格
+### 0.2、获取高德开放平台的Key
 
-申请方法可参考官方文档 `https://lbs.amap.com/api/mcp-server/summary`
+申请方法可参考官方文档 `https://lbs.amap.com/api/mcp-server/summary`，最终获取高德开放平台的Key
 
-假设你获取到的apikey为 `1234567abcdefg`，高德mcp的url和api格式如下：
+假设你获取到的key为 `1234567abcdefg`，接口的url和key的格式如下：
 ```
 mcp_url = "https://mcp.amap.com/sse"
 mcp_key = "1234567abcdefg"
