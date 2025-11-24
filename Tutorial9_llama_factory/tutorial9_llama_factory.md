@@ -131,36 +131,37 @@ import torch_npu
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-model_dir = （'./models/Qwen2-1.5B-Instruct')
-print(f"Model downloaded to: {model_dir}")
+# model_dir = './models/Qwen2-1.5B-Instruct'
+# os.environ.get('SCOW_AI_MODEL_PATH')
+for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH', './models/Qwen2-1.5B-Instruct')]:
+    print(f"Model downloaded to: {model_dir}")
 
+    # 设置NPU设备
+    device = 'npu:0'
+    torch.npu.set_device(device)
 
-# 设置NPU设备
-device = 'npu:0'
-torch.npu.set_device(device)
+    # 加载模型和分词器
+    tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
 
-# 加载模型和分词器
-tokenizer = AutoTokenizer.from_pretrained(model_dir)
-model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
+    model.eval()  # 设置为评估模式
 
-model.eval()  # 设置为评估模式
+    # 准备输入数据
+    input_text = "你好，你是谁？"
+    input_ids = tokenizer.encode(input_text, return_tensors='pt').to(device)
+    print("input_ids:", input_ids)
 
-# 准备输入数据
-input_text = "你好，你是谁？"
-input_ids = tokenizer.encode(input_text, return_tensors='pt').to(device)
-print("input_ids:", input_ids)
+    # 运行推理
+    with torch.no_grad():
+        output = model.generate(input_ids, max_length=500)
 
-# 运行推理
-with torch.no_grad():
-    output = model.generate(input_ids, max_length=500)
-
-# 解码输出
-generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-print("\ngenerated_text:", generated_text)
+    # 解码输出
+    generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+    print("\ngenerated_text:", generated_text)
 ```
 
 2.2.4 粘贴到已经打开的空白的 step1_model_reasoning.py 文件，这样就完成了文件创建
-![alt text](../tutorial_scow_for_ai.assets/2.2.4-HW-check-step1-py.png)
+![alt text](assets/image-45.png)
 
 2.3 在app文件夹中创建 step2_refined_model_reasoning.py 文件，这是作为模型微调后做推理的文件
 
@@ -208,7 +209,7 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 
 2.3.4 粘贴到已经打开的空白的 step2_refined_model_reasoning.py 文件，这样就完成了文件创建
 ![alt text](../tutorial_scow_for_ai.assets/2.3.4-HW-check-step2-py.png)
-
+![alt text](assets/image-46.png)
 ## 3、用镜像对模型进行推理、微调
 
 3.1 使用还没有经过微调的模型进行推理
