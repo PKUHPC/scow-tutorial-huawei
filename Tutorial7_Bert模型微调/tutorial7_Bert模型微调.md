@@ -29,7 +29,7 @@
 
 ![alt text](assets/image-2.png)
 
-创建成功后，在“已创建的应用”中点击 “连接” 进入应用：
+创建成功后，在“已创建的应用”中点击 “连接或进入” 进入应用：
 
 ![alt text](assets/image-3.png)
 

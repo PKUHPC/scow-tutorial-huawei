@@ -105,7 +105,7 @@ export_legacy_format: false
 选择一张加速卡，点击提交
 ![alt text](assets/image-27.png)
 
-点击连接
+点击连接或者进入
 ![alt text](assets/image-28.png)
 
 在聊天框进行对话，可以发现模型回答达到预期效果
