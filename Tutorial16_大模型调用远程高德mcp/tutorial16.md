@@ -204,7 +204,7 @@ from fastmcp import Client
 import openai
 
 class OpenAIToolClient:
-    def __init__(self, mcp_url: str, mcp_key: str, openai_url: str, openai_key: str, model: str = "deepseek-v3.1-think-128k"):
+    def __init__(self, mcp_url: str, mcp_key: str, openai_url: str, openai_key: str, model: str = "gpt-4.1"):
         self.session = Client(f"{mcp_url}?key={mcp_key}")
         self.openai = openai.AsyncOpenAI(api_key=openai_key, base_url=openai_url)
         self.model = model
