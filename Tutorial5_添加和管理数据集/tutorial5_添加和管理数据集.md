@@ -83,7 +83,7 @@
 ![alt text](assets/image110.png)
 
 点击数据集名称前的 + 加号，+ 加号变成 - 减号后，展开查看数据集的版本已经添加成功：
-![alt text](assets/image-107.png)
+![alt text](assets/image107.png)
 
 ---
 > 作者：孔德硕；龙汀汀*
