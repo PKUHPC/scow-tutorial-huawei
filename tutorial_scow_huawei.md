@@ -35,6 +35,8 @@
   - **[Tutorial13 在训练模块中使用LLaMA-Factory对Qwen大模型进行微调-多机多卡](Tutorial13_使用训练模块进行大模型微调(多机多卡)/tutorial13.md)**: 在智算平台，训练模块中使用LLaMA-Factory框架对Qwen大模型进行多机多卡微调、推理的过程。
   - **[Tutorial14 对QwenVL模型图生文进行微调-单机单卡](Tutorial14-MindSpeed-MM模型微调/Tutorial14.md)**: 在智算平台，通过MindSpeed-MM框架使用COCO2017数据集对QwenVL模型进行微调。
   - **[Tutorial15 多卡部署长期运行的大模型服务](Tutorial15-vllm-ascend-部署大模型服务/Tutorial15.md)**: 在智算平台使用多卡部署Qwen3-32B大模型。
+  - **[Tutorial16 大模型调用远程高德mcp](Tutorial16_大模型调用远程高德mcp/tutorial16.md)**：在超算平台调用大模型与远程高德mcp进行交互
+  - **[Tutorial17 大模型调用本地部署mcp](Tutorial17_大模型调用本地部署mcp/tutorial17.md)**：在超算平台调用大模型与本地部署mcp进行交互
 
 关于集群的登录入口，请从所联系的管理员处获取。
 
