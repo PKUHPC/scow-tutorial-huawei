@@ -41,8 +41,6 @@ mcp_key = "1234567abcdefg"
 sse_url = "https://mcp.amap.com/sse?key=1234567abcdefg"
 ```
 
-url已经集成到后续代码中，后续不会用到，因此这里只作介绍，但apikey在后续仍需使用，需要记住
-
 ## 1、启动应用配置环境
 
 切换到超算平台中
