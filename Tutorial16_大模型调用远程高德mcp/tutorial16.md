@@ -13,19 +13,17 @@
 
 ### 0.1、获取大模型发布方url和apikey
 
-建议有anthropic和openai官方apikey的用户优先使用官方调用方法
-
-如果没有官方apikey，可以向 `北京大学计算中心` 申请北大模型部署平台（https://chat.noc.pku.edu.cn）的调用权限，将会得到专属apikey
+本教程需要调用anthropic和openai的api。
 
 假设你获取到的apikey为 `abcdefg1234567`，anthropic和openai的url和apikey格式如下：
 ```
 # anthropic
-anthropic_url = "https://chat.noc.pku.edu.cn"
+anthropic_url = "https://大模型api地址"
 anthropic_key = "abcdefg1234567"
 
 # openai
-openai_url = "https://chat.noc.pku.edu.cn/v1"
-openai_key = "sk-abcdefg1234567"  # 需要加上前缀sk-
+openai_url = "https://大模型api地址/v1"
+openai_key = "abcdefg1234567"
 ```
 
 url已经集成到后续代码中，后续不会用到，因此这里只作介绍，但apikey在后续仍需使用，需要记住
@@ -84,7 +82,7 @@ pip install anthropic==0.74.1 fastmcp==2.13.1 openai==2.8.1
 
 ![alt text](assets/image-5.png)
 
-将下面的代码粘贴到文件中
+将下面的代码粘贴到文件中，注意根据实际情况修改"大模型api地址"
 ```python
 import asyncio
 from fastmcp import Client
@@ -175,7 +173,7 @@ class ClaudeToolClient:
 async def main():
     mcp_url = "https://mcp.amap.com/sse"
     mcp_key = ""
-    anthropic_url = "https://chat.noc.pku.edu.cn"
+    anthropic_url = "https://大模型api地址"
     anthropic_key = ""
 
     client = ClaudeToolClient(mcp_url, mcp_key, anthropic_url, anthropic_key)
@@ -297,7 +295,7 @@ class OpenAIToolClient:
 async def main():
     mcp_url = "https://mcp.amap.com/sse"
     mcp_key = ""
-    openai_url = "https://chat.noc.pku.edu.cn/v1"  # 如果用官方不用填
+    openai_url = "https://大模型api地址/v1"  # 如果用官方不用填
     openai_key = ""
 
     client = OpenAIToolClient(mcp_url, mcp_key, openai_url, openai_key)
