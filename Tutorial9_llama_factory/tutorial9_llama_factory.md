@@ -131,7 +131,7 @@ import torch_npu
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-model_dir =  './models/Qwen2-1.5B-Instruct')
+model_dir = （'./models/Qwen2-1.5B-Instruct')
 print(f"Model downloaded to: {model_dir}")
 
 
