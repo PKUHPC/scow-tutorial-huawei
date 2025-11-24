@@ -53,3 +53,8 @@ python3 -m vllm.entrypoints.openai.api_server --model $SCOW_AI_MODEL_PATH --serv
 ![alt text](assets/image-12.png)
 
 也可以进一步接入cline、dify等智能体框架
+
+---
+> 作者：张宇飞；龙汀汀*
+>
+> 联系方式：l.tingting@pku.edu.cn

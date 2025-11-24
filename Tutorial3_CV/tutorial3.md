@@ -210,3 +210,8 @@ python tutorial3.py
 最后可以看到如下日志输出，可以知道经过简单的训练后，分类成功率能够到达61%左右
 
 ![alt text](assets/image-6.png)
+
+---
+> 作者：黎颖；褚苙扬；龙汀汀*
+>
+> 联系方式：l.tingting@pku.edu.cn
