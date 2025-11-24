@@ -55,7 +55,7 @@
 ![alt text](assets/image-12.png)
 ![alt text](assets/image-13.png)
 
-分别点击进入应用（最好在此时分不同页面区分主节点应用和从节点应用）
+分别点击进入应用（最好在此时分不同页面区分主节点应用和从节点应用，此时需先打开一个作业等待vscode页面完全加载完成再打开另一个作业）
 
 ![alt text](assets/image-9.png)
 
@@ -153,7 +153,7 @@ llamafactory-cli export /app/lora_merge.yaml
 
 ![alt text](assets/image-20.png)
 
-点击进入nextchat应用
+等待进入按钮可用（需要点击刷新按钮，一般需等待约五分钟），点击进入nextchat应用
 
 ![alt text](assets/image-21.png)
 
