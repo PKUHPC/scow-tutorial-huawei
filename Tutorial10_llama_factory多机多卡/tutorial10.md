@@ -144,7 +144,8 @@ llamafactory-cli export /app/lora_merge.yaml
 
 ![alt text](assets/image-18.png)
 
-添加挂载点，填写前面记录的【合并模型的存储路径】；添加环境变量，名称填写`SCOW_AI_MODEL_PATH`，值同样填写前面记录到的【合并模型的存储路径】
+* 添加挂载点，填写前面记录的【合并模型的存储路径】
+* 添加环境变量，名称填写`SCOW_AI_MODEL_PATH`，值同样填写前面记录到的【合并模型的存储路径】
 
 ![alt text](assets/image-19.png)
 
