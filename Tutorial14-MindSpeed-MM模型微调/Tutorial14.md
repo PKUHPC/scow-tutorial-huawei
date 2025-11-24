@@ -13,8 +13,8 @@
 如果您所使用的集群没有COCO2017这一公共数据集，您需要自行下载数据集并上传到集群（建议在超算集群中使用shell或创建应用进行下载）
 
 需要下载两个部分的数据：
-* COCO2017数据集[COCO2017](https://cocodataset.org/#download)，并解压到目标目录下的./data/COCO2017文件夹中
-* 获取图片数据集的描述文件（[LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main)），下载至./data/路径下
+* COCO2017数据集[COCO2017](https://cocodataset.org/#download)，可以使用命令 `wget http://images.cocodataset.org/zips/train2017.zip` 进行下载，并使用命令 `unzip train2017.zip` 解压到目标目录下的./data/COCO2017文件夹中
+* 获取图片数据集的描述文件（[LLaVA-Instruct-150K](https://www.modelscope.cn/datasets/AI-ModelScope/LLaVA-Instruct-150K/files)），可以使用命令 `modelscope download --dataset AI-ModelScope/LLaVA-Instruct-150K` 进行下载，下载至./data/路径下
 
 得到的目录结构如下：
 
