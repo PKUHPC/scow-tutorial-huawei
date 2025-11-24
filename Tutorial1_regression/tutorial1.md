@@ -7,7 +7,7 @@
 * 所需资源：单机单卡，建议使用1张910B NPU运行本教程。
 * 目标：本节旨在通过 [kaggle 房价预测竞赛](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) 这一简单案例展示如何使用全连接神经网络解决回归问题。
 
-此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
+此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](../Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
 
 ## 1. 环境准备
 切换到超算平台中
@@ -44,7 +44,7 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ## 2. 数据集下载
 作为简化模型的案例，这里使用的是 [kaggle 房价预测竞赛中的训练数据集](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)。在后面的处理中，我们只使用了数值部分的特征，并把全部数据分为训练集和测试集两部分。
 
-实验所用数据: [train.csv](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial1_regression/data/train.csv)，到网页中点击复制
+实验所用数据: [train.csv](./data/train.csv)，到网页中点击复制
 
 ![alt text](assets/image-8.png)
 

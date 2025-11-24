@@ -9,7 +9,7 @@
 
 ‌CLIP模型（Contrastive Language-Image Pre-training）是一种由OpenAI在2021年发布的多模态预训练模型，旨在通过大量文本-图像对进行训练，以理解和匹配图像内容与相应的自然语言描述‌。‌
 
-此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
+此教程运行在SCOW超算平台中，请确保运行过[Tutorial0 搭建Python环境](../Tutorial0_python_env/tutorial0.md)中1.2安装conda的步骤，再来尝试运行本教程
 
 ## 1、环境准备
 切换到超算平台中

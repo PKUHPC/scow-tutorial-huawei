@@ -110,6 +110,7 @@ output_dir: ${WORK_DIR}/llama-factory-output
 logging_dir: ./logs/tensorboard
 # report_to: tensorboard" > config.yaml
 ```
+
 2.1.2 粘贴到终端terminal，再按回车键执行这些代码，完成创建config.yaml 文件
 ![alt text](assets/image-42.png)
 
