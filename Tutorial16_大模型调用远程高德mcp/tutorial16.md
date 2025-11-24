@@ -321,6 +321,6 @@ python openai_mcp.py
 ![alt text](assets/image-8.png)
 
 ---
-> 作者：褚苙扬；龙汀汀
+> 作者：褚苙扬；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn

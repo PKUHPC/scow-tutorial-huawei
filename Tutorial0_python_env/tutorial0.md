@@ -99,6 +99,6 @@ conda activate tutorial0
 ![alt text](assets/image-20.png)
 
 ---
-> 作者：褚苙扬；龙汀汀
+> 作者：褚苙扬；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn

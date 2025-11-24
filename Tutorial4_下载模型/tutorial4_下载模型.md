@@ -35,6 +35,6 @@ modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/
 ```
 
 ---
-> 作者：孔德硕；龙汀汀
+> 作者：孔德硕；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn

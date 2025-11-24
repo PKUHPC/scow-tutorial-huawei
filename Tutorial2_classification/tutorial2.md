@@ -114,6 +114,6 @@ python tutorial2.py
 ![alt text](assets/image-13.png)
 
 ---
-> 作者：褚苙扬；龙汀汀
+> 作者：褚苙扬；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn

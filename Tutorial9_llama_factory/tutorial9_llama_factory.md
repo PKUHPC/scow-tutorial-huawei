@@ -250,6 +250,6 @@ for model_dir in [os.environ.get('SCOW_AI_MODEL_PATH'), os.path.join(os.environ.
 ![alt text](assets/image-24.png)
 
 ---
-> 作者：孔德硕；龙汀汀
+> 作者：孔德硕；石晶；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn

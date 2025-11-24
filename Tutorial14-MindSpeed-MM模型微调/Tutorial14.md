@@ -248,6 +248,6 @@ bash examples/qwen2vl/inference_qwen2vl_2b.sh
 可以发现微调后的模型更能理解我们给出的prompt并给出更为准确的答案
 
 ---
-> 作者：褚苙扬；龙汀汀
+> 作者：褚苙扬；龙汀汀*
 >
 > 联系方式：l.tingting@pku.edu.cn
