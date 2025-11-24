@@ -129,7 +129,8 @@ pip3 install torchvision==0.21.0
 再按回车键，确保成功安装
 
 3.3 在用户名文件夹中创建 tutorial4.py 文件，这是作为大模型推理的文件
-3.3.1 点击红色箭头所指的图标，新建文件，在蓝色方框内给新建的文件取名 tutorial4.py.py 再按回车键
+3.3.1 点击红色箭头所指的图标，新建文件，在蓝色方框内给新建的文件取名 tutorial4.py 再按回车键
+
 ![alt text](assets/image-29.png)
 
 3.3.2 右侧上半部的窗口打开了这个新建的 tutorial4.py 空白文件
