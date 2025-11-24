@@ -129,7 +129,7 @@ export_legacy_format: false
 llamafactory-cli export /app/lora_merge.yaml
 ```
 
-在终端看到以下输出则模型合并成功，红框的部分就是【合并模型的存储路径】，记录下来后续模型推理验证会使用到，这里是`/data/home/demo/scow/ai/appData/ascend-k8s-vscode-20251104-130708/llama-factory-merged`
+在终端看到以下输出则模型合并成功，红框的部分就是【合并模型的存储路径】，记录下来后续模型推理验证会使用到
 
 ![alt text](assets/image-15.png)
 
