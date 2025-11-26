@@ -32,7 +32,7 @@
 添加算法、数据集、模型
 * 算法：公共算法->code-server->4.95.3
 * 数据集：我的数据集->identity->latest
-* 模型：公共模型->Qwen2.5-1.5B-Instruct->latest（如果您使用的集群没有该模型，请参考[Tutorial16](../Tutorial16_下载模型/tutorial16_下载模型.md)下载模型，其中的1.1.6步骤命令使用modelscope download --model Qwen/Qwen2.5-1.5B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-1.5B-Instruct）
+* 模型：公共模型->Qwen2.5-1.5B-Instruct->latest（如果您使用的集群没有该模型，请参考[Tutorial4](../Tutorial4_下载模型/tutorial4_下载模型.md)下载模型，其中的1.1.6步骤命令使用modelscope download --model Qwen/Qwen2.5-1.5B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-1.5B-Instruct）
 * 运行命令：勾选修改默认命令，填入`${SCOW_AI_ALGORITHM_PATH}/bin/code-server`，确保能够运行选择的算法
 
 ![alt text](assets/image-4.png)
