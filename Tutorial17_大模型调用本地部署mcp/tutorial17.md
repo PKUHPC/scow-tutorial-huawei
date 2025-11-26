@@ -1,4 +1,4 @@
-# Tutorial16: 使用大模型调用远程高德mcp进行交互
+# Tutorial17: 使用大模型调用本地部署mcp进行交互
 
 * 集群类型：超算平台
 * 所需镜像：无
@@ -57,13 +57,13 @@ conda activate tutorial17
 pip install anthropic==0.74.1 fastmcp==2.13.1 openai==2.8.1
 ```
 
-## 2、anthropic模型调用高德mcp
+## 2、anthropic模型调用本地部署mcp
 
 运行 `touch anthropic_mcp.py` 命令创建文件并打开
 
 ![alt text](assets/assets/image.png)
 
-将下面的代码粘贴到文件中，注意根据实际情况，把"antabcdefg1234567"修改为你自己的anthropic api key，"amap1234567abcdefg"修改为你自己的高德开放平台Key，"大模型api地址"修改为真实大模型api地址
+将下面的代码粘贴到文件中，注意根据实际情况，把"antabcdefg1234567"修改为你自己的anthropic api key，"大模型api地址"修改为真实大模型api地址
 ```python
 import asyncio
 from fastmcp import Client
@@ -197,13 +197,13 @@ python anthropic_mcp.py
 
 ![alt text](assets/assets/image-1.png)
 
-## 3、openai模型调用高德mcp
+## 3、openai模型调用本地部署mcp
 
 运行 `touch openai_mcp.py` 命令创建文件并打开
 
 ![alt text](assets/assets/image-2.png)
 
-将下面的代码粘贴到文件中，注意根据实际情况，把"openaiabcdefg1234567"修改为你自己的openai api key，"amap1234567abcdefg"修改为你自己的高德开放平台Key，"大模型api地址"修改为真实大模型api地址
+将下面的代码粘贴到文件中，注意根据实际情况，把"openaiabcdefg1234567"修改为你自己的openai api key，"大模型api地址"修改为真实大模型api地址
 ```python
 import asyncio
 from fastmcp import Client
