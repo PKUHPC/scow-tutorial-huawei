@@ -41,7 +41,7 @@
 * 勾选添加类型 - 算法，下拉菜单中，选取 公共算法；算法下拉菜单中，选取 code-server(official) 算法，版本下拉菜单中，选取 4.95.3，此时应可以看到算法描述部分显示启动命令，与1.1.4步骤中的启动命令是一致的
 ![alt text](assets/image-5.png)
 
-* 勾选添加类型 - 数据集，下拉菜单中，选取 我的数据集；数据集下拉菜单中，选取刚创建的 identity（这里有你的用户名） 数据集，版本下拉菜单中，选取刚在数据集中设置的版本号；有多个版本的话，选取恰当的版本
+* 勾选添加类型 - 数据集，下拉菜单中，选取 我的数据集；数据集下拉菜单中，选取刚创建的 identity-pku-assistant（这里有你的用户名） 数据集，版本下拉菜单中，选取刚在数据集中设置的版本号；有多个版本的话，选取恰当的版本
 ![alt text](assets/image-13.png)
 
 1.2.5 本教程采用单节点单卡，资源部分不需要修改。也可以根据实际需要，如单节点多卡的话，在 单节点加速卡卡数 中修改为2/4/8（单节点上限是8卡，卡数越多，对大模型训练的时间会相应缩短）然后点击 提交 按钮
@@ -97,7 +97,7 @@ do_train: true
 finetuning_type: lora # 微调类型,例如lora
 lora_target: all  # LoRA微调的目标模块
 dataset_dir: $SCOW_AI_DATASET_PATH
-dataset: identity # 新模型的数据集名称，位置在dataset_dir/data/identity.json
+dataset: identity-pku-assistant # 新模型的数据集名称，位置在dataset_dir/data/identity-pku-assistant.json
 template: qwen # 数据模板
 cutoff_len: 1024 # 序列截断长度
 max_samples: 1000 # 最大样本数 
