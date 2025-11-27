@@ -31,7 +31,7 @@
 选择 默认镜像，app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
 ![alt text](assets/image-72.png)
 
-1.3.2 添加模型和算法
+1.3.2 添加模型和数据集
 
 * 勾选添加类型 - 模型，下拉菜单中，选取 公共模型；模型下拉菜单中，选取 Qwen2.5-7B-Instruct(official) 模型，版本下拉菜单中，选取 latest(如果您使用的集群没有该模型，请参考[Tutorial4](../Tutorial4_下载模型/tutorial4_下载模型.md)下载模型，其中tutorial4中的1.1.6步骤使用`modelscope download --model Qwen/Qwen2.5-7B-Instruct --local_dir ./Qwen/Qwen/Qwen2.5-7B-Instruct`)
 ![alt text](assets/image-73.png)
