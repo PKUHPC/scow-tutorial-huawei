@@ -99,7 +99,6 @@
 2.3.1 在 对话模板 的下拉菜单中，选择 qwen 模型，因为是对 qwen 千问模型进行微调和对话
 ![alt text](assets/image-89.png)
 ![alt text](assets/image-90.png)
-![alt text](assets/image-91.png)
 
 2.3.2 修改微调所需要的参数
 * 在 学习率 中，将参数修改为 1e-4
