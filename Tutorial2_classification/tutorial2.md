@@ -45,6 +45,7 @@ cd CLIP
 pip install .
 pip install torch==2.3.1 torch-npu==2.3.1 torchvision==0.18.1 numpy==1.26.4 pandas==2.2.2 scipy==1.13.1
 cd ..
+source /usr/local/Ascend/ascend-toolkit/set_env.sh
 ```
 
 ## 2、数据准备
