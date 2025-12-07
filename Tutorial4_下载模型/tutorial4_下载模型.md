@@ -38,7 +38,10 @@
 在终端中依次运行以下命令
 ```shell
 pip install modelscope
+tmux new -s tutorial4  # 建立tmux会话
 modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir $WORK_DIR/Qwen3-4B-Instruct-2507
+# 按ctrl+d再单按b退出
+tmux kill-session -t tutorial4  # 删除tmux会话
 ```
 
 运行命令 `echo $WORK_DIR/Qwen3-4B-Instruct-2507` 查看安装模型的路径，其中红框框起来的部分就是模型的绝对路径
