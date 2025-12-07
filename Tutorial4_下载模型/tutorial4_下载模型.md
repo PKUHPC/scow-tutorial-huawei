@@ -37,10 +37,12 @@
 
 在终端中依次运行以下命令
 ```shell
+sudo yum update
+sudo yum install tmux
 pip install modelscope
 tmux new -s tutorial4  # 建立tmux会话
 modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir $WORK_DIR/Qwen3-4B-Instruct-2507
-# 按ctrl+d再单按b退出
+# 按ctrl+b再单按d退出
 tmux kill-session -t tutorial4  # 删除tmux会话
 ```
 
@@ -82,7 +84,10 @@ tmux kill-session -t tutorial4  # 删除tmux会话
 
 ```bash
 pip install modelscope
-modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen/Qwen3-4B-Instruct-2507
+tmux new -s tutorial4  # 建立tmux会话
+modelscope download --model Qwen/Qwen3-4B-Instruct-2507 --local_dir ./Qwen/Qwen3-4B-Instruct-2507
+# 按ctrl+b再单按d退出
+tmux kill-session -t tutorial4  # 删除tmux会话
 ```
 
 ## 2、使用智算平台管理模型
