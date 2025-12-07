@@ -71,10 +71,17 @@ pip install  modelscope==1.22.3
 ```
 
 ## 2. 下载模型和数据
-```
+```shell
+tmux new -s tutorial7  # 建立tmux会话
+source ~/.bashrc
+conda activate tutorial7
+
 # 通过命令行下载模型和数据
 export HF_ENDPOINT=https://hf-mirror.com
 modelscope download --model google-bert/bert-base-uncased --local_dir ./bert-base-uncased
+
+# 下载结束后按ctrl+b再单按d退出
+tmux kill-session -t tutorial7  # 删除tmux会话
 ```
 
 ## 3. 运行模型微调

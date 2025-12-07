@@ -67,7 +67,6 @@ evaluate==0.4.3 diffusers==0.32.1 sentencepiece==0.2.0 protobuf==5.29.2 decorato
 -i https://mirrors.pku.edu.cn/pypi/web/simple
 
 pip install  huggingface_hub==0.35.3
-pip install  modelscope==1.22.3
 # 平台已预置了驱动固件和CANN算子库，用户无需安装。
 ```
 ## 2. 下载模型
@@ -76,8 +75,16 @@ pip install  modelscope==1.22.3
 ![alt text](assets/image-5.png)
 
 ```
+tmux new -s tutorial8  # 建立tmux会话
+source ~/.bashrc
+conda activate tutorial8
+pip install  modelscope==1.22.3
+
 # 通过命令行下载模型和数据
 modelscope download --model stabilityai/stable-diffusion-3-medium-diffusers --local_dir stabilityai/stable-diffusion-3-medium-diffusers
+
+# 下载结束后按ctrl+b再单按d退出
+tmux kill-session -t tutorial8  # 删除tmux会话
 ```
 
 ## 3. 文生图
