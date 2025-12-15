@@ -37,6 +37,7 @@
   - **[Tutorial15 多卡部署长期运行的大模型服务](Tutorial15-vllm-ascend-部署大模型服务/Tutorial15.md)**: 在智算平台使用多卡部署Qwen3-32B大模型。
   - **[Tutorial16 大模型调用远程高德mcp](Tutorial16_大模型调用远程高德mcp/tutorial16.md)**：在超算平台调用大模型与远程高德mcp进行交互
   - **[Tutorial17 大模型调用本地部署mcp](Tutorial17_大模型调用本地部署mcp/tutorial17.md)**：在超算平台调用大模型与本地部署mcp进行交互
+  - **[Tutorial18 使用推理模块部署mineru](Tutorial18_使用推理模块部署mineru/tutorial18.md)**：使用推理模块部署MinerU PDF文档提取工具，并另起VScode应用远程调用部署的工具将指定的pdf文件转换为md格式
 
 关于集群的登录入口，请从所联系的管理员处获取。
 
