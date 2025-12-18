@@ -3,17 +3,13 @@
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3
 * 所需模型：无
-* 所需数据集：无
+* 所需数据集：教程内提供
 * 所需资源：单机多卡（1*4 Ascend910B）
-* 目标：使用卓越中心的智算平台探索昇腾虚拟机环境配置，并基于CANN 8.3.RC1进行SHMEM的尝试
+* 目标：本节在卓越集群的智算平台中使用VScode应用，基于CANN 8.3.RC1进行SHMEM的配置
 
-## 作者
-> 作者：石弼钊，罗国杰 （北京大学 计算机学院）
-> 
-> 联系方式：{bshi, gluo}@pku.edu.cn
 
-## 虚拟机申请
-1. 进入scow-zy.pku.edu.cn/dashboard，默认将进入超算平台页面，点击右上角进入 **智算平台；**
+## 作业申请
+1. 进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
 
     ![](assets/image-0.png)
 
@@ -23,7 +19,7 @@
 
 3. 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
     1. **app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
-4. **【重要】在 添加挂载点 处酌情添加挂载，否则不能持久化保存数据。**
+4. **添加挂载点，持久化保存数据。**
 
     ![](assets/image-2.png)
 
@@ -31,7 +27,7 @@
 
     ![](assets/image-3.png)
 
-## 虚拟机连接与配置
+## 作业连接与配置
 1. 进入vscode后，新建terminal
 
     ![](assets/image-4.png)
@@ -47,13 +43,13 @@
     yum install gcc g++ cmake make python3 vim tmux findutils util-linux python-pip git -y
     ```
 
-    2. 结果：中间log省略
+    2. 结果：
 
     ![](assets/image-6.png)
 
     ![](assets/image-7.png)
 
-4. 查看NPU的相关信息 npu-smi info，提示报错
+4. 查看NPU的相关信息 npu-smi info
     1. 现象： 
 
     ![](assets/image-8.png)
@@ -75,8 +71,7 @@
 
     ![](assets/image-10.png)
 
-    3. 本次实验所需的包只有 Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run，还可进一步安装 Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
-    4. 下载后文件可通过scow网页上的 文件 进行上传，**此处我们默认已有挂载的目录到容器中**![](assets/image-11.png)
+    3. 下载后文件可通过scow网页上的 文件 进行上传，**此处我们默认已有挂载的目录到容器中**![](assets/image-11.png)
 6. 安装CANN
     1. 首先增加执行权限
         1. 命令：
@@ -85,7 +80,7 @@
             chmod +x Ascend-cann*.run
         ```
 
-        2. 结果：
+        2. 执行结果：
 
         ![](assets/image-12.png)
 
@@ -189,5 +184,9 @@
         ![](assets/image-22.png)
 
 ## 总结
-Tutorial19完成了在 SCOW-ZY 智算集群下，从OpenEULER开始配置CANN的教程，同时以SHMEM为目标应用进行了测试。感谢学校和华为公司各位专家在环境配置中给予的帮助！
+在卓越中心智算平台上，按照Tutorial19的步骤，顺利完成了从OpenEuler开始配置CANN环境，到最终实现SHMEM目标的全过程。感谢学校和华为公司各位专家在环境配置中给予的帮助！
 
+## 作者
+> 作者：石弼钊，罗国杰 （北京大学 计算机学院）
+> 
+> 联系方式：{bshi, gluo}@pku.edu.cn
