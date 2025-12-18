@@ -164,7 +164,7 @@
         ```bash
         source /usr/local/Ascend/shmem/latest/set_env.sh
         bash scripts/build.sh -examples
-        cd examples/matmul_allreduce
+        cd examples/allgather_matmul
         bash scripts/run.sh 0,1,2,3
         ```
 
@@ -172,16 +172,9 @@
 
         ![](assets/image-21.png)
 
-        3. 在测试同时再打开一个terminal查看NPU的显存分配
-            1. 命令：
-
-        ```bash
-        watch -n 1 npu-smi info
-        ```
-
-            2. 结果：能正常跑&分配显存，但精度存在一定误差
-
         ![](assets/image-22.png)
+
+
 
 ## 总结
 在卓越中心智算平台上，按照Tutorial19的步骤，顺利完成了从OpenEuler开始配置CANN环境，到最终实现SHMEM目标的全过程。感谢学校和华为公司各位专家在环境配置中给予的帮助！
