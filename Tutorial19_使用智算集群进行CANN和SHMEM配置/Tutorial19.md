@@ -111,7 +111,7 @@ echo $ASCEND_HOME_PATH
 ![](assets/image-15.png)
 
 ### 3.6 安装SHMEM相关的环境
-##### 3.6.1 安装virtualenv
+安装virtualenv
         
 
 ```bash
@@ -122,7 +122,7 @@ pip install virtualenv
 
 ![](assets/image-16.png)
 
-#### 3.6.2 克隆SHMEM repo
+克隆SHMEM repo
 
 ```bash
 git clone https://gitee.com/ascend/shmem.git
@@ -132,7 +132,7 @@ git clone https://gitee.com/ascend/shmem.git
 
 ![](assets/image-17.png)
 
-#### 3.6.3 创建venv并激活，安装pip包
+创建venv并激活，安装pip包
 
 ```bash
 cd shmem && virtualenv myenv
@@ -145,7 +145,7 @@ pip3 install torch==2.1.0
 
 ![](assets/image-18.png)
 
-#### 3.6.4 编译SHMEM库并安装到/usr/local/Ascend下
+编译SHMEM库并安装到/usr/local/Ascend下
 
 ```bash
 bash scripts/build.sh
@@ -158,7 +158,7 @@ bash scripts/build.sh
 
 ![](assets/image-20.png)
 
-#### 3.6.5 编译SHMEM examples并测试
+编译SHMEM examples并测试
 
 ```bash
 source /usr/local/Ascend/shmem/latest/set_env.sh
