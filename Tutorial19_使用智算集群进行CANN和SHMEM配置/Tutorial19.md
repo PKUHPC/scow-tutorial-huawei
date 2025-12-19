@@ -27,8 +27,9 @@
 ![](assets/image-1.png)
 
 ### 2.3 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
+
 ```bash
-   **app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
+app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3
 ```
 
 ### 2.4 下载后的CANN包我们挂载到容器中
@@ -60,7 +61,10 @@ yum install gcc g++ cmake make python3 vim tmux findutils util-linux python-pip 
 
 ![](assets/image-7.png)
 
-### 3.4 查看NPU的相关信息 npu-smi info 
+### 3.4 查看NPU的相关信息 
+```bash
+npu-smi info
+```
 
 ![](assets/image-8.png)
 更新LD_LIBRARY_PATH，酌情添加到~/.bashrc中
@@ -103,11 +107,11 @@ ls /usr/local/Ascend/ascend-toolkit
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 echo $ASCEND_HOME_PATH
 ```
-
+结果：
 ![](assets/image-15.png)
 
 ### 3.6 安装SHMEM相关的环境
-安装virtualenv
+##### 3.6.1 安装virtualenv
         
 
 ```bash
@@ -118,7 +122,7 @@ pip install virtualenv
 
 ![](assets/image-16.png)
 
-克隆SHMEM repo
+#### 3.6.2 克隆SHMEM repo
 
 ```bash
 git clone https://gitee.com/ascend/shmem.git
@@ -128,7 +132,7 @@ git clone https://gitee.com/ascend/shmem.git
 
 ![](assets/image-17.png)
 
-创建venv并激活，安装pip包
+#### 3.6.3 创建venv并激活，安装pip包
 
 ```bash
 cd shmem && virtualenv myenv
@@ -141,7 +145,7 @@ pip3 install torch==2.1.0
 
 ![](assets/image-18.png)
 
-编译SHMEM库并安装到/usr/local/Ascend下
+#### 3.6.4 编译SHMEM库并安装到/usr/local/Ascend下
 
 ```bash
 bash scripts/build.sh
@@ -154,7 +158,7 @@ bash scripts/build.sh
 
 ![](assets/image-20.png)
 
-编译SHMEM examples并测试
+#### 3.6.5 编译SHMEM examples并测试
 
 ```bash
 source /usr/local/Ascend/shmem/latest/set_env.sh
