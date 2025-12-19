@@ -12,7 +12,7 @@
     8.3+的版本需要自行下载安装：[https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1](https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1)
     本次实验所需的包只有 Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run，还可进一步安装 Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
 
-    ![](https://github.com/PKUHPC/scow-tutorial-huawei/blob/main/Tutorial19_%E4%BD%BF%E7%94%A8%E6%99%BA%E7%AE%97%E9%9B%86%E7%BE%A4%E8%BF%9B%E8%A1%8CCANN%E5%92%8CSHMEM%E9%85%8D%E7%BD%AE/assets/image-10.png?raw=true)
+    ![alt text](assets/image-10.png)
 ## 2. 作业申请
 进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
 
