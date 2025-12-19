@@ -9,10 +9,10 @@
 
 
 ## 1. 下载CANN 8.3.RC1
-    根据CANN包版本的不同，可使用不同的方式进行下载，截止到2025年12月17日，使用conda下载的版本最新为8.2，8.3+的版本需要自行下载安装：[https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1](https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1)
+    8.3+的版本需要自行下载安装：[https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1](https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1)
     本次实验所需的包只有 Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run，还可进一步安装 Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
 
-    ![](assets/image-10.png)
+    ![](./assets/image-10.png)
 ## 2. 作业申请
 进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
 
@@ -55,26 +55,26 @@
     ![](assets/image-7.png)
 
 1. 查看NPU的相关信息 npu-smi info 
+
     ![](assets/image-8.png)
-    更新LD_LIBRARY_PATH，酌情添加到~/.bashrc中
+更新LD_LIBRARY_PATH，酌情添加到~/.bashrc中
 
     ```bash
         export LD_LIBRARY_PATH=/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64/common
     ```
 
-    重新执行 npu-smi info
+重新执行 npu-smi info
 
     ![](assets/image-9.png)
 
-2. 安装CANN
-    首先增加执行权限
+2. 安装CANN,增加执行权限
     
 
         ```bash
             chmod +x Ascend-cann*.run
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-12.png)
 
@@ -84,13 +84,13 @@
         ./Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
         ```
 
-        EULA要选Y，耗时约5-10分钟
+    EULA要选Y，耗时约5-10分钟
 
         ![](assets/image-13.png)
 
         ![](assets/image-14.png)
 
-        验证：
+    验证：
 
         ```bash
         ls /usr/local/Ascend/ascend-toolkit
@@ -108,7 +108,7 @@
         pip install virtualenv
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-16.png)
 
@@ -118,7 +118,7 @@
         git clone https://gitee.com/ascend/shmem.git
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-17.png)
 
@@ -131,7 +131,7 @@
         pip3 install torch==2.1.0
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-18.png)
 
@@ -142,7 +142,7 @@
         ./ci/release/aarch64/SHMEM_1.0.0_linux-aarch64.run --install
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-19.png)
 
@@ -157,7 +157,7 @@
         bash scripts/run.sh 0,1,2,3
         ```
 
-        结果：
+    结果：
 
         ![](assets/image-21.png)
 
