@@ -13,61 +13,66 @@
     本次实验所需的包只有 Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run，还可进一步安装 Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
 
 ![alt text](assets/image-10.png)
+
+下载后的文件可通过scow网页上的 文件 进行上传
+![](assets/image-11.png)
+
 ## 2. 作业申请
-进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
+### 2.1 进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
 
 ![](assets/image-0.png)
 
-进入 智算平台 页面后选择 **作业**，并点击**vscode**创建应用；
+### 2.2 进入 智算平台 页面后选择 **作业**，并点击**vscode**创建应用；
 
 ![](assets/image-1.png)
 
-进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
-**app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
+### 2.3 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
 
-下载后文件可通过scow网页上的 文件 进行上传，此处我们挂载到容器中
+   **app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
+
+### 2.4 下载后的CANN包我们挂载到容器中
 
 ![](assets/image-2.png)
-![](assets/image-11.png)
 
-选择加速卡的数量，此处由于需要多卡环境，此处我们选择4卡作为例子，最多单个作业可申请8张卡；
+
+### 2.5 选择加速卡的数量，此处由于需要多卡环境，此处我们选择4卡作为例子，最多单个作业可申请8张卡；
 
 ![](assets/image-3.png)
 
 ## 3. 作业连接与配置
-进入vscode后，新建terminal
+### 3.1 进入vscode后，新建terminal
 
 ![](assets/image-4.png)
 
-查看相关的系统版本
+### 3.2 查看相关的系统版本
 
 ![](assets/image-5.png)
 
-进行必要安装
-    ```bash
-    yum install gcc g++ cmake make python3 vim tmux findutils util-linux python-pip git -y
-    ```
+### 3.3 进行必要安装
+ ```bash
+yum install gcc g++ cmake make python3 vim tmux findutils util-linux python-pip git -y
+```
 
-    结果：
+结果：
 
 ![](assets/image-6.png)
 
 ![](assets/image-7.png)
 
-1. 查看NPU的相关信息 npu-smi info 
+### 3.4 查看NPU的相关信息 npu-smi info 
 
 ![](assets/image-8.png)
 更新LD_LIBRARY_PATH，酌情添加到~/.bashrc中
 
-    ```bash
-        export LD_LIBRARY_PATH=/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64/common
-    ```
+```bash
+    export LD_LIBRARY_PATH=/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64/common
+ ```
 
 重新执行 npu-smi info
 
 ![](assets/image-9.png)
 
-2. 安装CANN,增加执行权限
+### 3.5 安装CANN,增加执行权限
     
 
         ```bash
@@ -100,7 +105,7 @@
 
     ![](assets/image-15.png)
 
-3. 安装SHMEM相关的环境
+### 3.6 安装SHMEM相关的环境
     安装virtualenv
         
 
