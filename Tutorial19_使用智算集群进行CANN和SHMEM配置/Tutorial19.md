@@ -12,36 +12,36 @@
     8.3+的版本需要自行下载安装：[https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1](https://www.hiascend.com/developer/download/community/result?module=cann&cann=8.3.RC1)
     本次实验所需的包只有 Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run，还可进一步安装 Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
 
-    ![alt text](assets/image-10.png)
+![alt text](assets/image-10.png)
 ## 2. 作业申请
 进入scow-zy.pku.edu.cn/dashboard，点击右上角进入 **智算平台；**
 
-    ![](assets/image-0.png)
+![](assets/image-0.png)
 
 进入 智算平台 页面后选择 **作业**，并点击**vscode**创建应用；
 
-    ![](assets/image-1.png)
+![](assets/image-1.png)
 
 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
 **app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
 
 下载后文件可通过scow网页上的 文件 进行上传，此处我们挂载到容器中
 
-    ![](assets/image-2.png)
-    ![](assets/image-11.png)
+![](assets/image-2.png)
+![](assets/image-11.png)
 
 选择加速卡的数量，此处由于需要多卡环境，此处我们选择4卡作为例子，最多单个作业可申请8张卡；
 
-    ![](assets/image-3.png)
+![](assets/image-3.png)
 
 ## 3. 作业连接与配置
 进入vscode后，新建terminal
 
-    ![](assets/image-4.png)
+![](assets/image-4.png)
 
 查看相关的系统版本
 
-    ![](assets/image-5.png)
+![](assets/image-5.png)
 
 进行必要安装
     ```bash
@@ -50,13 +50,13 @@
 
     结果：
 
-    ![](assets/image-6.png)
+![](assets/image-6.png)
 
-    ![](assets/image-7.png)
+![](assets/image-7.png)
 
 1. 查看NPU的相关信息 npu-smi info 
 
-    ![](assets/image-8.png)
+![](assets/image-8.png)
 更新LD_LIBRARY_PATH，酌情添加到~/.bashrc中
 
     ```bash
@@ -65,7 +65,7 @@
 
 重新执行 npu-smi info
 
-    ![](assets/image-9.png)
+![](assets/image-9.png)
 
 2. 安装CANN,增加执行权限
     
@@ -76,7 +76,7 @@
 
     结果：
 
-        ![](assets/image-12.png)
+    ![](assets/image-12.png)
 
     安装toolkit，将经过解压和EULA accept，选择Y
 
@@ -86,9 +86,9 @@
 
     EULA要选Y，耗时约5-10分钟
 
-        ![](assets/image-13.png)
+    ![](assets/image-13.png)
 
-        ![](assets/image-14.png)
+    ![](assets/image-14.png)
 
     验证：
 
@@ -98,7 +98,7 @@
         echo $ASCEND_HOME_PATH
         ```
 
-        ![](assets/image-15.png)
+    ![](assets/image-15.png)
 
 3. 安装SHMEM相关的环境
     安装virtualenv
@@ -110,7 +110,7 @@
 
     结果：
 
-        ![](assets/image-16.png)
+    ![](assets/image-16.png)
 
     克隆SHMEM repo
 
@@ -120,7 +120,7 @@
 
     结果：
 
-        ![](assets/image-17.png)
+    ![](assets/image-17.png)
 
     创建venv并激活，安装pip包
 
@@ -133,7 +133,7 @@
 
     结果：
 
-        ![](assets/image-18.png)
+    ![](assets/image-18.png)
 
     编译SHMEM库并安装到/usr/local/Ascend下
 
@@ -144,9 +144,9 @@
 
     结果：
 
-        ![](assets/image-19.png)
+    ![](assets/image-19.png)
 
-        ![](assets/image-20.png)
+    ![](assets/image-20.png)
 
     编译SHMEM examples并测试
 
@@ -159,9 +159,9 @@
 
     结果：
 
-        ![](assets/image-21.png)
+    ![](assets/image-21.png)
 
-        ![](assets/image-22.png)
+    ![](assets/image-22.png)
 
 
 
