@@ -27,8 +27,9 @@
 ![](assets/image-1.png)
 
 ### 2.3 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
-
+```bash
    **app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3**
+```
 
 ### 2.4 下载后的CANN包我们挂载到容器中
 
@@ -75,98 +76,98 @@ yum install gcc g++ cmake make python3 vim tmux findutils util-linux python-pip 
 ### 3.5 安装CANN,增加执行权限
     
 
-        ```bash
-            chmod +x Ascend-cann*.run
-        ```
+```bash
+chmod +x Ascend-cann*.run
+```
 
-    结果：
+结果：
 
-    ![](assets/image-12.png)
+![](assets/image-12.png)
 
-    安装toolkit，将经过解压和EULA accept，选择Y
+安装toolkit，将经过解压和EULA accept，选择Y
 
-        ```bash
-        ./Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
-        ```
+```bash
+./Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
+```
 
-    EULA要选Y，耗时约5-10分钟
+EULA要选Y，耗时约5-10分钟
 
-    ![](assets/image-13.png)
+![](assets/image-13.png)
 
-    ![](assets/image-14.png)
+![](assets/image-14.png)
 
-    验证：
+验证：
 
-        ```bash
-        ls /usr/local/Ascend/ascend-toolkit
-        source /usr/local/Ascend/ascend-toolkit/set_env.sh
-        echo $ASCEND_HOME_PATH
-        ```
+```bash
+ls /usr/local/Ascend/ascend-toolkit
+source /usr/local/Ascend/ascend-toolkit/set_env.sh
+echo $ASCEND_HOME_PATH
+```
 
-    ![](assets/image-15.png)
+![](assets/image-15.png)
 
 ### 3.6 安装SHMEM相关的环境
-    安装virtualenv
+安装virtualenv
         
 
-        ```bash
-        pip install virtualenv
-        ```
+```bash
+pip install virtualenv
+```
 
-    结果：
+结果：
 
-    ![](assets/image-16.png)
+![](assets/image-16.png)
 
-    克隆SHMEM repo
+克隆SHMEM repo
 
-        ```bash
-        git clone https://gitee.com/ascend/shmem.git
-        ```
+```bash
+git clone https://gitee.com/ascend/shmem.git
+ ```
 
-    结果：
+结果：
 
-    ![](assets/image-17.png)
+![](assets/image-17.png)
 
-    创建venv并激活，安装pip包
+创建venv并激活，安装pip包
 
-        ```bash
-        cd shmem && virtualenv myenv
-        source myenv/bin/activate
-        pip3 install attrs cython 'numpy>=1.19.2,<=1.24.0' decorator sympy cffi pyyaml pathlib2 psutil protobuf==3.20.0 scipy requests absl-py
-        pip3 install torch==2.1.0
-        ```
+```bash
+cd shmem && virtualenv myenv
+source myenv/bin/activate
+pip3 install attrs cython 'numpy>=1.19.2,<=1.24.0' decorator sympy cffi pyyaml pathlib2 psutil protobuf==3.20.0 scipy requests absl-py
+pip3 install torch==2.1.0
+```
 
-    结果：
+结果：
 
-    ![](assets/image-18.png)
+![](assets/image-18.png)
 
-    编译SHMEM库并安装到/usr/local/Ascend下
+编译SHMEM库并安装到/usr/local/Ascend下
 
-        ```bash
-        bash scripts/build.sh
-        ./ci/release/aarch64/SHMEM_1.0.0_linux-aarch64.run --install
-        ```
+```bash
+bash scripts/build.sh
+./ci/release/aarch64/SHMEM_1.0.0_linux-aarch64.run --install
+```
 
-    结果：
+结果：
 
-    ![](assets/image-19.png)
+![](assets/image-19.png)
 
-    ![](assets/image-20.png)
+![](assets/image-20.png)
 
-    编译SHMEM examples并测试
+编译SHMEM examples并测试
 
-        ```bash
-        source /usr/local/Ascend/shmem/latest/set_env.sh
-        bash scripts/build.sh -examples
-        cd examples/allgather_matmul
-        bash scripts/run.sh 0,1,2,3
-        ```
+```bash
+source /usr/local/Ascend/shmem/latest/set_env.sh
+bash scripts/build.sh -examples
+cd examples/allgather_matmul
+bash scripts/run.sh 0,1,2,3
+```
 
-    结果：
+结果：
 
-    ![](assets/image-21.png)
+![](assets/image-21.png)
 
-    ![](assets/image-22.png)
+![](assets/image-22.png)
 
 
 
