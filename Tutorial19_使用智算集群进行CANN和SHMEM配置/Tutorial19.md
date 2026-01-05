@@ -14,7 +14,11 @@
 
 ![alt text](assets/image-10.png)
 
-下载后的文件可通过scow网页上的 文件 进行上传
+下载后的文件可通过scow网页上的 文件 进行上传，进入文件管理页面后，先点击 新目录 创建一个新的目录
+![](assets/image-23.png)
+![](assets/image-24.png)
+
+进入刚刚创建好的目录下，再点击 上传 进行上传
 ![](assets/image-11.png)
 
 ## 2. 作业申请
@@ -26,18 +30,24 @@
 
 ![](assets/image-1.png)
 
-### 2.3 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
+### 2.3 在创建VSCode交互应用页面中，进行配置：
+2.3.1 进入 创建vscode 页面后 在应用配置处选择 **远程镜像**，并使用OpenEuler 22.03的版本；
 
 ```bash
 app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3
 ```
+![](assets/image-25.png)
 
-### 2.4 下载后的CANN包我们挂载到容器中
+2.3.2 将 ${SCOW_AI_ALGORITHM_PATH}/bin/code-server 拷贝后，粘贴到 修改默认命令框中，用于平台启动VSCode应用；
+![](assets/image-26.png)
 
-![](assets/image-2.png)
+2.3.3 下载后的CANN包我们挂载到容器中，这里挂载点的目录要选择你上传了CANN包的目录
+![](assets/image-27.png)
 
+2.3.4 勾选添加类型 - 算法，下拉菜单中，选取 公共算法；算法下拉菜单中，选取 code-server(official) 算法，版本下拉菜单中，选取 4.95.3；此时应可以看到算法描述部分显示启动命令，与2.3.2步骤中的启动命令是一致的
+![](assets/image-28.png)
 
-### 2.5 选择加速卡的数量，此处由于需要多卡环境，此处我们选择4卡作为例子，最多单个作业可申请8张卡；
+### 2.4 选择加速卡的数量，此处由于需要多卡环境，此处我们选择4卡作为例子，最多单个作业可申请8张卡；
 
 ![](assets/image-3.png)
 
@@ -45,6 +55,15 @@ app-store-images.pku.edu.cn/openeuler/openeuler-arm:22.03-lts-sp3
 ### 3.1 进入vscode后，新建terminal
 
 ![](assets/image-4.png)
+
+回到未结束的作业页面，点击 详情
+![](assets/image-30.png)
+
+这里能看到挂载点的目录，复制以便下一步使用
+![](assets/image-31.png)
+
+回到vscode应用中，进入到刚刚复制的目录下，后续的所有操作都在这个目录下进行
+![](assets/image-29.png)
 
 ### 3.2 查看相关的系统版本
 
