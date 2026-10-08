@@ -1,11 +1,11 @@
-# Tutorial10: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡微调、推理
+# Tutorial10: 使用LLaMA-Factory官方镜像完成Qwen大模型的多机多卡训练、推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/hiyouga/llamafactory:0.9.4-npu-a2
 * 所需模型：Qwen2.5-1.5B-Instruct
 * 所需数据集：教程内提供
 * 所需资源：多机多卡（2节点*2加速卡）
-* 目标：本节以Qwen2.5-1.5B-Instruct模型为例，使用LLaMA-Factory官方镜像对这个Qwen大模型完成多机多卡微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
+* 目标：本节以Qwen2.5-1.5B-Instruct模型为例，使用LLaMA-Factory官方镜像对这个Qwen大模型完成多机多卡微调训练、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 ## 1、准备环境
 
