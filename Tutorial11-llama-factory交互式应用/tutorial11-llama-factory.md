@@ -1,15 +1,15 @@
-# Tutorial11: 使用LLaMa-Factory交互应用做大模型微调
+# Tutorial11: 使用LLaMa-Factory交互应用做大模型训练与推理
 
 * 集群类型：智算平台
 * 所需镜像：app-store-images.pku.edu.cn/pkuhpc/llama-factory-ascend-v1:20250909-8.0.0-910b-ubuntu22.04-py3.10
 * 所需模型：Qwen2.5-7B-Instruct
 * 所需数据集：教程内提供
 * 所需资源：单机单卡，建议使用1张910B NPU运行本教程。
-* 目标：本节以Qwen2.5-7B-Instruct模型为例，使用LLaMA-Factory交互应用对这个Qwen大模型完成微调、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
+* 目标：本节以Qwen2.5-7B-Instruct模型为例，使用LLaMA-Factory交互应用对这个Qwen大模型完成微调训练、推理的步骤。未经过微调的Qwen大模型认为自己是Qwen大模型；经过微调后，Qwen大模型认为自己是北大人工智能助手。
 
 分以下几步来实现：
 1. 创建LLaMA-Factory交互应用，选取Qwen2.5-7B-Instruct模型
-2. 按照步骤，使用LLaMA-Factory交互应用完成对大模型的微调和推理
+2. 按照步骤，使用LLaMA-Factory交互应用完成对大模型的微调训练和推理
 
 ## 1、拉取镜像并安装
 
